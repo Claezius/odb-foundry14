@@ -25,3 +25,6 @@ Data: 23/11/2026. Sistema: Foundry VTT 14. Ramificação de desenvolvimento: `re
 
 ## Próxima ação
 Encerrar a fase de testes extensivos; preparar uma candidata instalável apenas quando o usuário solicitar instalação/atualização, com backup e teste breve de inicialização. Publicação pública fica separada da conclusão técnica local.
+
+## Confirmação posterior de instalação
+O usuário instalou o arquivo `odb-foundry14-release-rc30.zip` e informou: **“Com este zip, tudo funcionou.”** Registra-se aprovação de funcionamento da instalação local reportada pelo usuário, sem inferir que todas as ressalvas anteriores tenham sido testadas ou resolvidas. A publicação pública permanece condicionada aos direitos de redistribuição.
