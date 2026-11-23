@@ -1281,6 +1281,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       // v0.4.3 — restauração de backup JSON, sem modificar PE ou habilidades.
       historyPanel.querySelector('.odb-historico-importar')?.addEventListener('change',async e=>{
         const input = e.currentTarget;
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para restaurar histórico.'); input.value = ''; return; }
         const file = input.files?.[0];
         if (!file) return;
         try {
@@ -1322,6 +1323,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       });
       historyPanel.querySelector('.odb-historico-limpar')?.addEventListener('click',async e=>{
         e.preventDefault();
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para limpar histórico.'); return; }
         const confirmed = await foundry.applications.api.DialogV2.confirm({
           window:{title:'Limpar histórico de evolução'},
           content:'<p>Apagar o histórico local de evoluções deste personagem? Esta ação não altera níveis nem PE e não pode ser desfeita.</p>',
@@ -1372,7 +1374,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       button.addEventListener('click', async event => {
         event.preventDefault();
         const item = this.actor.items.get(button.closest('[data-odb-item-id]')?.dataset.odbItemId);
-        if (!item) return;
+        if (!item || !item.isOwner) { ui.notifications.warn('Sem permissão para excluir item.'); return; }
         try {
           const confirmed = await foundry.applications.api.DialogV2.confirm({
             window: {title:'Excluir item'},
