@@ -25,7 +25,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     classes: ["odb", "sheet", "actor", "odb-classic"],
     position: { width: 1120, height: 920 },
     window: { resizable: true },
-    form: { submitOnChange: false, submitOnClose: false, closeOnSubmit: false,
+    form: { submitOnChange: true, submitOnClose: true, closeOnSubmit: false,
       handler: ODBActorSheet.prototype.onSubmitForm },
     actions: {
       createCareer: ODBActorSheet.prototype.createCareer,
