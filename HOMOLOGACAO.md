@@ -45,3 +45,24 @@ Limitações conhecidas: distribuição inicial de habilidades manual, bestiári
 - [ ] Verificar divergências de regras e registros incompletos com o Módulo Básico; poderes especiais manuais e tratamentos continuam sob controle do Mestre.
 
 A RC20 mantém as regras da RC19. A descrição antiga de limitações acima é histórica; a distribuição inicial foi implementada nas RC7–8, mas ainda não homologada. Não há atualização automática de registros existentes nos compêndios. A compatibilidade real com v14 ainda não foi verificada; o campo de versão verificada foi retirado do manifesto até homologação.
+
+
+---
+
+## Registro complementar — testes manuais informados pelo usuário (23/11/2026)
+
+**Escopo:** verificações efetuadas pelo usuário em mundo de testes no Foundry VTT 14, com respostas afirmativas durante a sessão de homologação. Este registro não substitui auditoria de regras, verificação de logs nem validação de permissões e migrações. Não marca automaticamente todos os itens detalhados das listas anteriores como concluídos.
+
+- [x] Ficha clássica abre; Jogador e Idade persistem após reabertura e reinício.
+- [x] Pontos gastos em atributo e habilidade são alterados, restaurados e persistem.
+- [x] Ataque, dano, absorção, redução e cura de PV, desgaste de armadura e persistência.
+- [x] Iniciativa e avanço de rodada no Combat Tracker.
+- [x] Arma de fogo bloqueia segundo disparo sem recarga; recarga e consumo de munição funcionam.
+- [x] Conjuração gera resultado no chat; consumo de PM e persistência conferidos.
+- [x] Concessão de 11 PE, tentativa de aprendizado e mudança de nível com persistência.
+- [x] Cinco compêndios aparecem e contêm registros (habilidades, armas, equipamentos, feitiços, bestiário).
+- [x] Criatura do bestiário importada, ficha preenchida e persistente; iniciativa e ataque em combate.
+
+**Ainda não comprovado por esta sessão:** confronto sistemático com todas as regras do livro; testes negativos de magia e incorporação; todos os limites de evolução; contagem, completude e ausência de duplicatas dos catálogos; nove profissões; migração de mundos antigos; permissões Mestre/jogador; múltiplos clientes; backup e restauração; direitos de redistribuição.
+
+**Resultado:** bateria funcional principal aprovada pelo usuário. RC30 permanece candidata, sem liberação pública integral. Qualquer RC31 exige mudanças concretas, testes e atualização explícita de versão.
