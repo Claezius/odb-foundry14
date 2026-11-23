@@ -14,3 +14,8 @@ const template = fs.readFileSync(new URL('../templates/actor-sheet.hbs', import.
 assert.match(sheet, /submitOnChange:\s*true/, 'Salvar alterações ao editar campos');
 assert.match(sheet, /submitOnClose:\s*true/, 'Salvar alterações ao fechar a ficha');
 assert.match(template, /<form\b/, 'A ficha deve conter formulário');
+
+// Protege o salvamento individual legado, necessário para campos sobrepostos à ficha clássica.
+assert.match(sheet, /input\\[data-odb-path\\]/, 'Os campos posicionados devem receber listeners');
+assert.match(sheet, /addEventListener\\('change'/, 'A edição individual deve disparar salvamento');
+assert.match(sheet, /await this\\.actor\\.update\\(\\{ \\[path\\]: value \\}\\)/, 'O salvamento individual deve atualizar o Actor');
