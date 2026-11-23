@@ -1,3 +1,23 @@
+# Estado da homologação da RC30 (23/11/2026)
+
+**Automação aprovada:** a revisão `2c71795` passou no GitHub Actions, incluindo `npm test` e verificação de sintaxe JavaScript. [Execução](https://github.com/Claezius/odb-foundry14/actions/runs/45278834783).
+
+**Homologação no Foundry VTT 14: PENDENTE.** O sucesso dos testes automatizados não comprova abertura de fichas, salvamento em mundo real, compatibilidade com dados antigos nem segurança de migração.
+
+## Procedimento prioritário de validação manual (em cópia do mundo)
+
+1. Fechar o Foundry; copiar integralmente o mundo e a pasta do sistema existente. Não testar sobre o mundo original.
+2. Instalar a RC30 somente na cópia e registrar o número exato do build do Foundry VTT 14.
+3. Criar personagem novo e preencher **Nome, Jogador, Idade, Raça, Profissão** e ao menos um atributo; mudar de campo, fechar a ficha, reabri-la e conferir os valores.
+4. Repetir a edição em um personagem antigo da cópia, especialmente Jogador e Idade. Reiniciar o Foundry e confirmar persistência após reinício.
+5. Alterar um campo e fechar imediatamente a ficha; conferir se a última alteração foi preservada. Testar também campo apagado e campo numérico.
+6. Abrir o console (F12) e registrar erros, se ocorrerem, junto ao nome do campo e passos para reproduzir.
+7. Se algum campo não persistir, **não homologar nem atualizar o mundo principal**. Restaurar a cópia do backup e corrigir a causa.
+
+**Critério de aprovação:** todas as verificações de persistência acima devem passar sem perda de dados; em seguida executar os demais cenários abaixo. Não publicar versão estável enquanto houver falhas críticas, lacunas de escopo ou pendências de direitos de redistribuição.
+
+---
+
 # Homologação em cópia do mundo — Foundry VTT 14
 Todos os itens abaixo estão pendentes de teste prático. Registre versão/build do Foundry, resultado e erros no console (F12).
 
