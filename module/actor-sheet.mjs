@@ -539,7 +539,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       const plano=()=>{
         const item=ator.items.get(q('.odb-feitico-selecionado').value);
         if(!item||!['feitico','encanto'].includes(item.type))throw Error('Selecione um feitiço ou encanto');
-        const religioso=sacerdote(ator.system.identidade.profissao);
+        const religioso=sacerdote(ator.system.identidade?.profissao ?? "");
         const tipo=religioso?'pd':q('.odb-feitico-recurso').value;
         if(!['pm','pd'].includes(tipo))throw Error('Recurso inválido');
         const r=ator.system.recursos[tipo], pv=Number(ator.system.recursos.pv.value);
@@ -557,13 +557,13 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       let ocupado=false;
       const acao=(classe,fn)=>q(classe)?.addEventListener('click',async e=>{e.preventDefault();if(ocupado)return;ocupado=true;try{await fn();}catch(err){ui.notifications.error(`ODB: ${err.message}`);console.error(err);}finally{ocupado=false;previa();}});
       const painel=q('.odb-incorporacao');
-      painel.hidden=!sacerdote(ator.system.identidade.profissao);
+      painel.hidden=!sacerdote(ator.system.identidade?.profissao ?? "");
       const seletor=q('.odb-orixa');
       for(const [nome,[custo]] of Object.entries(ORIXAS)){const opt=document.createElement('option');opt.value=nome;opt.textContent=`${nome} — ${custo} PD`;seletor.append(opt);}
       const estadoAtual=()=>ator.getFlag(SYSTEM_ID,'incorporacao')??{fase:'livre',rodadas:0};
       const mostrar=()=>{const s=estadoAtual();q('.odb-incorporacao-status').textContent=`${s.nome??'Sem Orixá'} | ${s.fase} | ${s.rodadas} rodadas`;};mostrar();
       for(const [classe,acaoNome] of [['iniciar','iniciar'],['manter','manter'],['avancar','avancar'],['encerrar','encerrar']])acao('.odb-orixa-'+classe,async()=>{
-        if(!game.user.isGM||!ator.isOwner||!sacerdote(ator.system.identidade.profissao))throw Error('Apenas o Mestre controla a incorporação');
+        if(!game.user.isGM||!ator.isOwner||!sacerdote(ator.system.identidade?.profissao ?? ""))throw Error('Apenas o Mestre controla a incorporação');
         if(acaoNome==='avancar'&&game.combat?.started&&game.combat.combatants.some(c=>c.actor?.uuid===ator.uuid))throw Error('Avance a rodada no rastreador de combate.');
         const s=estadoAtual(),pd=Number(ator.system.recursos.pd.value),nome=seletor.value;
         const paga=['iniciar','manter'].includes(acaoNome);
@@ -1384,7 +1384,15 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
   }
   async onSubmitForm(event, form, formData) {
-    await this.actor.update(foundry.utils.expandObject(formData.object));
+    if (!this.actor.isOwner) return;
+    const values = formData?.object ?? {};
+    const changes = {};
+    for (const [path, value] of Object.entries(values)) {
+      if (path === 'name' || path.startsWith('system.')) {
+        changes[path] = value;
+      }
+    }
+    if (Object.keys(changes).length) await this.actor.update(changes);
   }
   async _createItem(type, categoria) {
     const data = {name: ({arma:'Nova arma',habilidade:'Nova habilidade',equipamento:'Novo equipamento',feitico:'Novo feitiço'})[type] ?? 'Novo item',type};
