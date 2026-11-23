@@ -55,4 +55,26 @@ for(const file of ['equipamentos','feiticos']){
   verify(doc.system??{},schema,file+'['+i+'].system');
  }
 }
+// Garante que todos os caminhos literais da ficha clássica tenham suporte no esquema.
+const sheet=fs.readFileSync(new URL('module/actor-sheet.mjs',root),'utf8');
+const actorSchema=CONFIG.Actor.dataModels.personagem.defineSchema();
+const itemSchemas=Object.fromEntries(Object.entries(CONFIG.Item.dataModels).map(([type,Model])=>[type,Model.defineSchema()]));
+function hasPath(schema,path){
+ let field;
+ for(const segment of path.split('.')){
+  field=schema?.[segment];
+  if(!field)return false;
+  schema=field instanceof SchemaField?field.schema:null;
+ }
+ return true;
+}
+const actorPaths=[...new Set([...sheet.matchAll(/system\\.(identidade|atributos|recursos|combate)\\.[a-zA-Z][\\w.]*/g)].map(m=>m[0].slice(7).replace(/\\.$/,'')))];
+for(const path of actorPaths){
+ // Referências a objetos inteiros também são válidas.
+ assert.ok(hasPath(actorSchema,path),'Caminho da ficha ausente no modelo Actor: system.'+path);
+}
+const itemFields=[...new Set([...sheet.matchAll(/item\\.system\\.([a-zA-Z]\\w*)/g)].map(m=>m[1]))];
+for(const field of itemFields){
+ assert.ok(Object.values(itemSchemas).some(schema=>schema[field]),'Campo Item não declarado: '+field);
+}
 console.log('Compatibilidade RC30: template, manifesto e catálogos cobertos por esquemas (verificação estática).');
