@@ -66,3 +66,18 @@ A RC20 mantém as regras da RC19. A descrição antiga de limitações acima é 
 **Ainda não comprovado por esta sessão:** confronto sistemático com todas as regras do livro; testes negativos de magia e incorporação; todos os limites de evolução; contagem, completude e ausência de duplicatas dos catálogos; nove profissões; migração de mundos antigos; permissões Mestre/jogador; múltiplos clientes; backup e restauração; direitos de redistribuição.
 
 **Resultado:** bateria funcional principal aprovada pelo usuário. RC30 permanece candidata, sem liberação pública integral. Qualquer RC31 exige mudanças concretas, testes e atualização explícita de versão.
+
+
+---
+
+## Registro adicional — permissões de jogador (23/11/2026)
+
+**Resultado informado no teste manual:** a conta de Jogador abriu a ficha "Bandeirante de Teste", alterou dados e as alterações permaneceram gravadas.
+
+**Limite da evidência:** a permissão efetiva da conta (Observador ou Proprietário), inclusive eventuais permissões herdadas, **não foi confirmada**. Portanto, não é possível atribuir o comportamento ao sistema ou concluir que a proteção de Observador falhou. Classificação: **inconclusivo / não homologado**.
+
+**Decisão do usuário:** manter a configuração como está e continuar o projeto, sem insistir na verificação neste momento. Não alterar permissões do mundo nem alegar que o teste passou.
+
+**Automação:** as verificações estáticas de propriedade e as regressões do commit `bd6f8f0` passaram no GitHub Actions, execução nº 66: https://github.com/Claezius/odb-foundry14/actions/runs/45288755780 . Isso não substitui a verificação prática com duas contas.
+
+**Pendência para homologação final:** testar conta efetivamente configurada como Observador, outra como Proprietário, permissões herdadas, edição de recursos e itens e persistência após reinício. Realizar somente quando o usuário quiser retomar essa verificação.
