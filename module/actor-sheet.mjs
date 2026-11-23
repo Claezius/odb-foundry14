@@ -155,6 +155,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
     root.querySelector('.odb-aplicar-calculos')?.addEventListener('click', async event => {
       event.preventDefault();
+      if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para alterar personagem.'); return; }
       if(this.actor.getFlag(SYSTEM_ID,"passagens") && Object.keys(this.actor.getFlag(SYSTEM_ID,"passagens")).length){ui.notifications.warn("Cálculo inicial bloqueado após passagem registrada, para preservar ganhos.");return;}
       const a = this.actor.system.atributos ?? {};
       const nomes = ['forca','destreza','resistencia','inteligencia','sabedoria','carisma'];
@@ -455,6 +456,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       calcular();
       painelPV.querySelector('.odb-pv-aplicar')?.addEventListener('click',async event => {
         event.preventDefault();
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para alterar PV.'); return; }
         const plano = calcular();
         if (!plano) { ui.notifications.warn('ODB: ajuste de PV inválido.'); return; }
         const confirmado = await foundry.applications.api.DialogV2.confirm({
@@ -507,6 +509,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       calcular();
       painelEnergia.querySelector('.odb-energia-aplicar')?.addEventListener('click', async event => {
         event.preventDefault();
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para alterar PM/PD.'); return; }
         const plano = calcular();
         if (!plano) { ui.notifications.warn('ODB: ajuste de PM/PD inválido.'); return; }
         const confirmado = await foundry.applications.api.DialogV2.confirm({
@@ -1352,7 +1355,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         const row = input.closest('[data-odb-item-id]');
         const item = this.actor.items.get(row?.dataset.odbItemId);
         const field = input.dataset.odbField;
-        if (!item || !field) return;
+        if (!item || !item.isOwner || !field) return;
         const value = input.type === 'number'
           ? (input.value === '' ? 0 : Number(input.value)) : input.value;
         if (input.type === 'number' && (!Number.isFinite(value) || (['system.quantidade','system.municao'].includes(field) && (!Number.isSafeInteger(value)||value<0)) || (field==='system.peso'&&value<0))) {
