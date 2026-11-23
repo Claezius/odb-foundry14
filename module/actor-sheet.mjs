@@ -1,3 +1,4 @@
+import {entradasFicha} from './formulario.mjs';
 import {instalarDoencas} from "./doencas.mjs";
 import {instalarCondicoes} from "./condicoes.mjs";
 import {recargaPendente} from './rodadas.mjs';
@@ -24,7 +25,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     classes: ["odb", "sheet", "actor", "odb-classic"],
     position: { width: 1120, height: 920 },
     window: { resizable: true },
-    form: { submitOnChange: false, submitOnClose: false, closeOnSubmit: false,
+    form: { submitOnChange: true, submitOnClose: true, closeOnSubmit: false,
       handler: ODBActorSheet.prototype.onSubmitForm },
     actions: {
       createCareer: ODBActorSheet.prototype.createCareer,
@@ -154,6 +155,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
     root.querySelector('.odb-aplicar-calculos')?.addEventListener('click', async event => {
       event.preventDefault();
+      if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para alterar personagem.'); return; }
       if(this.actor.getFlag(SYSTEM_ID,"passagens") && Object.keys(this.actor.getFlag(SYSTEM_ID,"passagens")).length){ui.notifications.warn("Cálculo inicial bloqueado após passagem registrada, para preservar ganhos.");return;}
       const a = this.actor.system.atributos ?? {};
       const nomes = ['forca','destreza','resistencia','inteligencia','sabedoria','carisma'];
@@ -454,6 +456,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       calcular();
       painelPV.querySelector('.odb-pv-aplicar')?.addEventListener('click',async event => {
         event.preventDefault();
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para alterar PV.'); return; }
         const plano = calcular();
         if (!plano) { ui.notifications.warn('ODB: ajuste de PV inválido.'); return; }
         const confirmado = await foundry.applications.api.DialogV2.confirm({
@@ -506,6 +509,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       calcular();
       painelEnergia.querySelector('.odb-energia-aplicar')?.addEventListener('click', async event => {
         event.preventDefault();
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para alterar PM/PD.'); return; }
         const plano = calcular();
         if (!plano) { ui.notifications.warn('ODB: ajuste de PM/PD inválido.'); return; }
         const confirmado = await foundry.applications.api.DialogV2.confirm({
@@ -539,7 +543,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       const plano=()=>{
         const item=ator.items.get(q('.odb-feitico-selecionado').value);
         if(!item||!['feitico','encanto'].includes(item.type))throw Error('Selecione um feitiço ou encanto');
-        const religioso=sacerdote(ator.system.identidade.profissao);
+        const religioso=sacerdote(ator.system.identidade?.profissao ?? "");
         const tipo=religioso?'pd':q('.odb-feitico-recurso').value;
         if(!['pm','pd'].includes(tipo))throw Error('Recurso inválido');
         const r=ator.system.recursos[tipo], pv=Number(ator.system.recursos.pv.value);
@@ -557,13 +561,13 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       let ocupado=false;
       const acao=(classe,fn)=>q(classe)?.addEventListener('click',async e=>{e.preventDefault();if(ocupado)return;ocupado=true;try{await fn();}catch(err){ui.notifications.error(`ODB: ${err.message}`);console.error(err);}finally{ocupado=false;previa();}});
       const painel=q('.odb-incorporacao');
-      painel.hidden=!sacerdote(ator.system.identidade.profissao);
+      painel.hidden=!sacerdote(ator.system.identidade?.profissao ?? "");
       const seletor=q('.odb-orixa');
       for(const [nome,[custo]] of Object.entries(ORIXAS)){const opt=document.createElement('option');opt.value=nome;opt.textContent=`${nome} — ${custo} PD`;seletor.append(opt);}
       const estadoAtual=()=>ator.getFlag(SYSTEM_ID,'incorporacao')??{fase:'livre',rodadas:0};
       const mostrar=()=>{const s=estadoAtual();q('.odb-incorporacao-status').textContent=`${s.nome??'Sem Orixá'} | ${s.fase} | ${s.rodadas} rodadas`;};mostrar();
       for(const [classe,acaoNome] of [['iniciar','iniciar'],['manter','manter'],['avancar','avancar'],['encerrar','encerrar']])acao('.odb-orixa-'+classe,async()=>{
-        if(!game.user.isGM||!ator.isOwner||!sacerdote(ator.system.identidade.profissao))throw Error('Apenas o Mestre controla a incorporação');
+        if(!game.user.isGM||!ator.isOwner||!sacerdote(ator.system.identidade?.profissao ?? ""))throw Error('Apenas o Mestre controla a incorporação');
         if(acaoNome==='avancar'&&game.combat?.started&&game.combat.combatants.some(c=>c.actor?.uuid===ator.uuid))throw Error('Avance a rodada no rastreador de combate.');
         const s=estadoAtual(),pd=Number(ator.system.recursos.pd.value),nome=seletor.value;
         const paga=['iniciar','manter'].includes(acaoNome);
@@ -1277,6 +1281,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       // v0.4.3 — restauração de backup JSON, sem modificar PE ou habilidades.
       historyPanel.querySelector('.odb-historico-importar')?.addEventListener('change',async e=>{
         const input = e.currentTarget;
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para restaurar histórico.'); input.value = ''; return; }
         const file = input.files?.[0];
         if (!file) return;
         try {
@@ -1318,6 +1323,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       });
       historyPanel.querySelector('.odb-historico-limpar')?.addEventListener('click',async e=>{
         e.preventDefault();
+        if (!this.actor.isOwner) { ui.notifications.warn('Sem permissão para limpar histórico.'); return; }
         const confirmed = await foundry.applications.api.DialogV2.confirm({
           window:{title:'Limpar histórico de evolução'},
           content:'<p>Apagar o histórico local de evoluções deste personagem? Esta ação não altera níveis nem PE e não pode ser desfeita.</p>',
@@ -1351,7 +1357,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         const row = input.closest('[data-odb-item-id]');
         const item = this.actor.items.get(row?.dataset.odbItemId);
         const field = input.dataset.odbField;
-        if (!item || !field) return;
+        if (!item || !item.isOwner || !field) return;
         const value = input.type === 'number'
           ? (input.value === '' ? 0 : Number(input.value)) : input.value;
         if (input.type === 'number' && (!Number.isFinite(value) || (['system.quantidade','system.municao'].includes(field) && (!Number.isSafeInteger(value)||value<0)) || (field==='system.peso'&&value<0))) {
@@ -1368,7 +1374,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       button.addEventListener('click', async event => {
         event.preventDefault();
         const item = this.actor.items.get(button.closest('[data-odb-item-id]')?.dataset.odbItemId);
-        if (!item) return;
+        if (!item || !item.isOwner) { ui.notifications.warn('Sem permissão para excluir item.'); return; }
         try {
           const confirmed = await foundry.applications.api.DialogV2.confirm({
             window: {title:'Excluir item'},
@@ -1384,7 +1390,9 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
   }
   async onSubmitForm(event, form, formData) {
-    await this.actor.update(foundry.utils.expandObject(formData.object));
+    if (!this.actor.isOwner) return;
+    const changes = entradasFicha(formData?.object);
+    if (Object.keys(changes).length) await this.actor.update(changes);
   }
   async _createItem(type, categoria) {
     const data = {name: ({arma:'Nova arma',habilidade:'Nova habilidade',equipamento:'Novo equipamento',feitico:'Novo feitiço'})[type] ?? 'Novo item',type};

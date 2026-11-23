@@ -1,3 +1,23 @@
+# Estado da homologação da RC30 (23/11/2026)
+
+**Automação aprovada:** a revisão `2c71795` passou no GitHub Actions, incluindo `npm test` e verificação de sintaxe JavaScript. [Execução](https://github.com/Claezius/odb-foundry14/actions/runs/45278834783).
+
+**Homologação no Foundry VTT 14: PENDENTE.** O sucesso dos testes automatizados não comprova abertura de fichas, salvamento em mundo real, compatibilidade com dados antigos nem segurança de migração.
+
+## Procedimento prioritário de validação manual (em cópia do mundo)
+
+1. Fechar o Foundry; copiar integralmente o mundo e a pasta do sistema existente. Não testar sobre o mundo original.
+2. Instalar a RC30 somente na cópia e registrar o número exato do build do Foundry VTT 14.
+3. Criar personagem novo e preencher **Nome, Jogador, Idade, Raça, Profissão** e ao menos um atributo; mudar de campo, fechar a ficha, reabri-la e conferir os valores.
+4. Repetir a edição em um personagem antigo da cópia, especialmente Jogador e Idade. Reiniciar o Foundry e confirmar persistência após reinício.
+5. Alterar um campo e fechar imediatamente a ficha; conferir se a última alteração foi preservada. Testar também campo apagado e campo numérico.
+6. Abrir o console (F12) e registrar erros, se ocorrerem, junto ao nome do campo e passos para reproduzir.
+7. Se algum campo não persistir, **não homologar nem atualizar o mundo principal**. Restaurar a cópia do backup e corrigir a causa.
+
+**Critério de aprovação:** todas as verificações de persistência acima devem passar sem perda de dados; em seguida executar os demais cenários abaixo. Não publicar versão estável enquanto houver falhas críticas, lacunas de escopo ou pendências de direitos de redistribuição.
+
+---
+
 # Homologação em cópia do mundo — Foundry VTT 14
 Todos os itens abaixo estão pendentes de teste prático. Registre versão/build do Foundry, resultado e erros no console (F12).
 
@@ -25,3 +45,39 @@ Limitações conhecidas: distribuição inicial de habilidades manual, bestiári
 - [ ] Verificar divergências de regras e registros incompletos com o Módulo Básico; poderes especiais manuais e tratamentos continuam sob controle do Mestre.
 
 A RC20 mantém as regras da RC19. A descrição antiga de limitações acima é histórica; a distribuição inicial foi implementada nas RC7–8, mas ainda não homologada. Não há atualização automática de registros existentes nos compêndios. A compatibilidade real com v14 ainda não foi verificada; o campo de versão verificada foi retirado do manifesto até homologação.
+
+
+---
+
+## Registro complementar — testes manuais informados pelo usuário (23/11/2026)
+
+**Escopo:** verificações efetuadas pelo usuário em mundo de testes no Foundry VTT 14, com respostas afirmativas durante a sessão de homologação. Este registro não substitui auditoria de regras, verificação de logs nem validação de permissões e migrações. Não marca automaticamente todos os itens detalhados das listas anteriores como concluídos.
+
+- [x] Ficha clássica abre; Jogador e Idade persistem após reabertura e reinício.
+- [x] Pontos gastos em atributo e habilidade são alterados, restaurados e persistem.
+- [x] Ataque, dano, absorção, redução e cura de PV, desgaste de armadura e persistência.
+- [x] Iniciativa e avanço de rodada no Combat Tracker.
+- [x] Arma de fogo bloqueia segundo disparo sem recarga; recarga e consumo de munição funcionam.
+- [x] Conjuração gera resultado no chat; consumo de PM e persistência conferidos.
+- [x] Concessão de 11 PE, tentativa de aprendizado e mudança de nível com persistência.
+- [x] Cinco compêndios aparecem e contêm registros (habilidades, armas, equipamentos, feitiços, bestiário).
+- [x] Criatura do bestiário importada, ficha preenchida e persistente; iniciativa e ataque em combate.
+
+**Ainda não comprovado por esta sessão:** confronto sistemático com todas as regras do livro; testes negativos de magia e incorporação; todos os limites de evolução; contagem, completude e ausência de duplicatas dos catálogos; nove profissões; migração de mundos antigos; permissões Mestre/jogador; múltiplos clientes; backup e restauração; direitos de redistribuição.
+
+**Resultado:** bateria funcional principal aprovada pelo usuário. RC30 permanece candidata, sem liberação pública integral. Qualquer RC31 exige mudanças concretas, testes e atualização explícita de versão.
+
+
+---
+
+## Registro adicional — permissões de jogador (23/11/2026)
+
+**Resultado informado no teste manual:** a conta de Jogador abriu a ficha "Bandeirante de Teste", alterou dados e as alterações permaneceram gravadas.
+
+**Limite da evidência:** a permissão efetiva da conta (Observador ou Proprietário), inclusive eventuais permissões herdadas, **não foi confirmada**. Portanto, não é possível atribuir o comportamento ao sistema ou concluir que a proteção de Observador falhou. Classificação: **inconclusivo / não homologado**.
+
+**Decisão do usuário:** manter a configuração como está e continuar o projeto, sem insistir na verificação neste momento. Não alterar permissões do mundo nem alegar que o teste passou.
+
+**Automação:** as verificações estáticas de propriedade e as regressões do commit `bd6f8f0` passaram no GitHub Actions, execução nº 66: https://github.com/Claezius/odb-foundry14/actions/runs/45288755780 . Isso não substitui a verificação prática com duas contas.
+
+**Pendência para homologação final:** testar conta efetivamente configurada como Observador, outra como Proprietário, permissões herdadas, edição de recursos e itens e persistência após reinício. Realizar somente quando o usuário quiser retomar essa verificação.

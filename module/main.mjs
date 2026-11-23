@@ -1,12 +1,15 @@
 import {registrarRodadas} from "./rodadas.mjs";
 
 import { ODBActorSheet } from "./actor-sheet.mjs";
+import { registrarModelos } from "./modelos.mjs";
 
 const SYSTEM_ID = "odb-foundry14";
 
 Hooks.once("init", () => {
   if (game.system.id !== SYSTEM_ID) return;
 
+  // Sem um TypeDataModel explícito, Actor.system fica vazio no Foundry 14.
+  registrarModelos();
   CONFIG.Combat.initiative.formula = "1d10";
   registrarRodadas();
   game.settings.register(SYSTEM_ID, "catalogoEvolucao", {name: "Catálogo de evolução", scope: "world", config: false, type: Object, default: {}});

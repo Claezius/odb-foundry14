@@ -1,16 +1,16 @@
 {
   "id": "odb-foundry14",
   "title": "O Desafio dos Bandeirantes",
-  "description": "Ficha clássica, aprendizado, magia, combate, criação e catálogos. Candidata a lançamento; homologação no Foundry pendente.",
-  "version": "1.0.0-rc.29",
- "manifest": "https://raw.githubusercontent.com/Claezius/odb-foundry14/main/system.json",
-"download": "https://github.com/Claezius/odb-foundry14/releases/download/v1.0.0-rc.29/odb-foundry14-v1.0.0-rc.29.zip",
-"compatibility": {
-  "minimum": "14",
-  "verified": "14",
-  "maximum": "14"
-},
-"authors": [
+  "description": "Ficha clássica, aprendizado, magia, combate, criação e catálogos. RC30: modelos de dados Foundry 14 e correções de persistência; validação no aplicativo pendente.",
+  "version": "1.0.0-rc.30",
+  "manifest": "https://raw.githubusercontent.com/Claezius/odb-foundry14/main/system.json",
+  "download": "https://github.com/Claezius/odb-foundry14/releases/download/v1.0.0-rc.30/odb-foundry14-v1.0.0-rc.30.zip",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "authors": [
     {
       "name": "Projeto comunitário O Desafio dos Bandeirantes"
     }
@@ -84,6 +84,19 @@
         "ASSISTANT": "OWNER"
       }
     }
-
-  ]
+  ],
+  "documentTypes": {
+    "Actor": {
+      "personagem": {},
+      "npc": {}
+    },
+    "Item": {
+      "item": {},
+      "habilidade": {},
+      "arma": {},
+      "equipamento": {},
+      "feitico": {},
+      "encanto": {}
+    }
+  }
 }
