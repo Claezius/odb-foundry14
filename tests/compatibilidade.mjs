@@ -19,7 +19,13 @@ function verify(data,schema,prefix){
   }
  }
 }
-for(const type of template.Actor.types)verify(template.Actor.templates.base,CONFIG.Actor.dataModels[type].defineSchema(),'Actor.'+type);
+for(const type of template.Actor.types){
+ const schema=CONFIG.Actor.dataModels[type].defineSchema();
+ verify(template.Actor.templates.base,schema,'Actor.'+type);
+ const pv=schema.recursos.schema.pv.schema;
+ assert.equal(pv.value.options.initial,template.Actor.templates.base.recursos.pv.value,'PV inicial divergente');
+ assert.equal(pv.max.options.initial,template.Actor.templates.base.recursos.pv.max,'PV máximo inicial divergente');
+}
 for(const type of template.Item.types){
  const fields=Object.fromEntries(Object.entries(template.Item[type]).filter(([key])=>key!=='templates'));
  verify({...template.Item.templates.base,...fields},CONFIG.Item.dataModels[type].defineSchema(),'Item.'+type);
