@@ -1,3 +1,4 @@
+import {entradasFicha} from './formulario.mjs';
 import {instalarDoencas} from "./doencas.mjs";
 import {instalarCondicoes} from "./condicoes.mjs";
 import {recargaPendente} from './rodadas.mjs';
@@ -1385,13 +1386,7 @@ export class ODBActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   }
   async onSubmitForm(event, form, formData) {
     if (!this.actor.isOwner) return;
-    const values = formData?.object ?? {};
-    const changes = {};
-    for (const [path, value] of Object.entries(values)) {
-      if (path === 'name' || path.startsWith('system.')) {
-        changes[path] = value;
-      }
-    }
+    const changes = entradasFicha(formData?.object);
     if (Object.keys(changes).length) await this.actor.update(changes);
   }
   async _createItem(type, categoria) {
