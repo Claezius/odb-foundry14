@@ -68,12 +68,12 @@ function hasPath(schema,path){
  }
  return true;
 }
-const actorPaths=[...new Set([...sheet.matchAll(/system\\.(identidade|atributos|recursos|combate)\\.[a-zA-Z][\\w.]*/g)].map(m=>m[0].slice(7).replace(/\\.$/,'')))];
+const actorPaths=[...new Set([...sheet.matchAll(/system\.(identidade|atributos|recursos|combate)\.[a-zA-Z][\w.]*/g)].map(m=>m[0].slice(7).replace(/\.$/,'')))];
 for(const path of actorPaths){
  // Referências a objetos inteiros também são válidas.
  assert.ok(hasPath(actorSchema,path),'Caminho da ficha ausente no modelo Actor: system.'+path);
 }
-const itemFields=[...new Set([...sheet.matchAll(/item\\.system\\.([a-zA-Z]\\w*)/g)].map(m=>m[1]))];
+const itemFields=[...new Set([...sheet.matchAll(/item\.system\.([a-zA-Z]\w*)/g)].map(m=>m[1]))];
 for(const field of itemFields){
  assert.ok(Object.values(itemSchemas).some(schema=>schema[field]),'Campo Item não declarado: '+field);
 }
