@@ -5,7 +5,7 @@ const F = foundry.data.fields;
 const base = {
   identidade: {jogador:'',sexo:'',idade:'',nivel:1,raca:'',profissao:'',classeSocial:'',altura:'',peso:''},
   atributos: Object.fromEntries(['forca','destreza','resistencia','inteligencia','sabedoria','carisma'].map(k=>[k,{racial:0,profissao:0,gastos:0,final:0}])),
-  recursos: {pv:{value:10,max:10},pm:{value:0,max:0},pd:{value:0,max:0},bd:0,rm:0,vb:0,dinheiro:0,experiencia:0},
+  recursos: {pv:{value:0,max:0},pm:{value:0,max:0},pd:{value:0,max:0},bd:0,rm:0,vb:0,dinheiro:0,experiencia:0},
   combate: {defesa:0,resistencia:0,absorcaoCortante:0,absorcaoImpactante:0,condicoes:'',escudoNome:'',coleteNome:'',coleteResistencia:0,coleteCortante:0,coleteImpactante:0,extraNome:'',extraResistencia:0,extraCortante:0,extraImpactante:0}
 };
 base.atributos.sorte={gastos:0,final:0};
