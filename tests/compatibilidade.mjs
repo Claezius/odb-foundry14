@@ -19,9 +19,22 @@ function verify(data,schema,prefix){
   }
  }
 }
+function verifyDefaults(data,schema,prefix){
+ for(const [key,value] of Object.entries(data)){
+  const field=schema[key];
+  assert.ok(field,'Campo ausente: '+prefix+'.'+key);
+  if(value!==null&&typeof value==='object'&&!Array.isArray(value)){
+   assert.ok(field instanceof SchemaField,'Objeto não estruturado: '+prefix+'.'+key);
+   verifyDefaults(value,field.schema,prefix+'.'+key);
+  }else{
+   assert.deepEqual(field.options.initial,value,'Valor inicial divergente: '+prefix+'.'+key);
+  }
+ }
+}
 for(const type of template.Actor.types){
  const schema=CONFIG.Actor.dataModels[type].defineSchema();
  verify(template.Actor.templates.base,schema,'Actor.'+type);
+ verifyDefaults(template.Actor.templates.base,schema,'Actor.'+type);
  const pv=schema.recursos.schema.pv.schema;
  assert.equal(pv.value.options.initial,template.Actor.templates.base.recursos.pv.value,'PV inicial divergente');
  assert.equal(pv.max.options.initial,template.Actor.templates.base.recursos.pv.max,'PV máximo inicial divergente');
@@ -29,6 +42,7 @@ for(const type of template.Actor.types){
 for(const type of template.Item.types){
  const fields=Object.fromEntries(Object.entries(template.Item[type]).filter(([key])=>key!=='templates'));
  verify({...template.Item.templates.base,...fields},CONFIG.Item.dataModels[type].defineSchema(),'Item.'+type);
+ verifyDefaults({...template.Item.templates.base,...fields},CONFIG.Item.dataModels[type].defineSchema(),'Item.'+type);
 }
 for(const [kind,types] of Object.entries(manifest.documentTypes)){
  const models=CONFIG[kind].dataModels;
