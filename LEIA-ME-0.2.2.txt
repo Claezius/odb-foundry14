@@ -1,0 +1,1 @@
+ODB 0.2.2 — Prévia dos cálculos de atributos e recursos. Nada é aplicado automaticamente. Clique Aplicar cálculos e confirme para gravar valores finais. Valores atuais de PV/PM/PD são preservados. BD e Sorte permanecem manuais. A geometria da ficha 0.2.1 não foi modificada.

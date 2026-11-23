@@ -1,0 +1,16 @@
+O DESAFIO DOS BANDEIRANTES — v0.2.6
+
+Base: 0.2.5, confirmada funcionando pelo usuário.
+
+NOVO: painel separado de rolagens manuais de ataque, defesa e iniciativa, abaixo da ficha clássica.
+Ataque/defesa: chances percentuais INFORMADAS pelo Mestre, com 1d100.
+Iniciativa: expressão de dados INFORMADA pelo Mestre (1d20 é apenas um exemplo).
+Nenhuma rolagem altera PV, munição, atributos ou rastreador de combate.
+Não são regras oficiais automatizadas; requer validação com os livros.
+
+INSTALAÇÃO: faça backup do mundo e de Data/systems/odb-foundry14.
+Feche o Foundry e substitua a pasta pelo conteúdo deste ZIP.
+Teste em uma ficha de personagem. Se falhar, restaure a versão 0.2.5.
+
+Verificações realizadas: sintaxe JavaScript, JSON, estrutura ZIP.
+Não houve execução no Foundry VTT neste ambiente.

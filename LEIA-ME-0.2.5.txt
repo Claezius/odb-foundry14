@@ -1,0 +1,8 @@
+ODB v0.2.5 — COMBATE MANUAL
+Base: 0.2.4.
+Novo painel abaixo da ficha: cálculo aritmético de dano menos absorção cortante/impactante, mínimo zero.
+O cálculo pode ser publicado no chat, mas NÃO modifica PV, munição, recursos ou condições.
+Não é uma implementação das regras completas de combate do livro.
+O layout da imagem e o mecanismo de salvamento da ficha não foram alterados.
+Faça backup da pasta do sistema e do mundo antes de instalar.
+Verificações automáticas: sintaxe JS e integridade ZIP. Execução no Foundry não testada.

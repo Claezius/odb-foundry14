@@ -1,0 +1,1 @@
+Catálogo persistente por mundo. Apenas o Mestre pode salvar; confirmação substitui catálogo anterior. Reabra fichas para consultar a versão salva. Valores oficiais ainda não incluídos. Teste no Foundry 14 pendente.

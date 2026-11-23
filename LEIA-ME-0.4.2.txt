@@ -1,0 +1,7 @@
+ODB v0.4.2 — Exportação de histórico de evolução
+
+Novo botão Exportar histórico (JSON) no painel de histórico. Salva uma cópia local para auditoria antes de limpar registros. Não modifica PE, níveis ou habilidades. Exporta somente até 30 registros existentes, sem reconstruir operações anteriores.
+
+Instalação: faça backup do mundo; com Foundry fechado, substitua a pasta Data/systems/odb-foundry14. Teste em mundo de cópia.
+
+Verificação estática não substitui teste de execução no Foundry VTT 14.

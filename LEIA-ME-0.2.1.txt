@@ -1,0 +1,1 @@
+Versão 0.2.1: deslocamento vertical +1,12 ponto percentual para Raça, Profissão, Classe social, Altura e Peso; Velocidade básica (Andando) reposicionada para a parte superior do quadrado, evitando o rótulo impresso. Barra de título da ficha isolada. Dados e rotinas de salvamento preservados.

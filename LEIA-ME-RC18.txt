@@ -1,0 +1,1 @@
+RC18 — Módulo Básico pp. 70–72. Cinco doenças, incubação, sintomas e dano por dia; tratamentos informativos. Mestre controla dias, aplica dano e cura. Não homologado no Foundry. Dano negativo de febre: interpretar como zero.

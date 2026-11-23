@@ -1,0 +1,1 @@
+Versão 0.2.3 — Inventário e feitiços: criação, edição e exclusão de documentos Item existentes no sistema. Não altera a ficha clássica nem aplica regras automaticamente. Faça backup antes de instalar. Não testado no Foundry.

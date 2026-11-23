@@ -1,0 +1,762 @@
+[
+  {
+    "name": "Abençoar",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "1 mês (objeto); 1 semana (pessoa)",
+      "porcentagem": 0,
+      "descricao": "Preparação 2 rodadas; objeto causa 5 de dano a seres malignos; pessoa recebe +10 RM e reduz em 2 o dano desses seres. Módulo Básico, p. 32–33."
+    }
+  },
+  {
+    "name": "Adivinhação",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Visões de um futuro possível. Módulo Básico, p. 33. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Agilidade",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto Obá incorporada",
+      "porcentagem": 0,
+      "descricao": "Esquiva +10. Módulo Básico, p. 33. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Amaldiçoar",
+    "type": "feitico",
+    "system": {
+      "custo": 7,
+      "duracao": "1 mês ou 50 anos (ritual)",
+      "porcentagem": 0,
+      "descricao": "Maldição; permite resistência à magia. Módulo Básico, p. 33. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Amizade",
+    "type": "feitico",
+    "system": {
+      "custo": 7,
+      "duracao": "1 hora",
+      "porcentagem": 0,
+      "descricao": "Induz simpatia; permite resistência à magia. Módulo Básico, p. 33. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Andar sobre as águas",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Permite caminhar sobre água. Módulo Básico, p. 33. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Apaixonar",
+    "type": "feitico",
+    "system": {
+      "custo": 7,
+      "duracao": "Permanente",
+      "porcentagem": 0,
+      "descricao": "Induz paixão; permite resistência à magia. Módulo Básico, p. 33. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Arco dourado de Oxóssi",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto incorporado",
+      "porcentagem": 0,
+      "descricao": "Arco de energia; dano 1d10+3; usa habilidade do encanto. Módulo Básico, p. 33. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Atear fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 2,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Incendeia 1 m² por toque. Módulo Básico, p. 33. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Aterrorizar animais",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "1d10+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Afugenta 2d6+1 animais comuns. Módulo Básico, p. 33–34. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Aura",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Recebe impressões de objetos ou ambientes. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Aura em metal",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Aura restrita a objetos metálicos. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Axé",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "1d6+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Aumenta resistência em 15. Módulo Básico, p. 34. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Barreira Astral",
+    "type": "feitico",
+    "system": {
+      "custo": 7,
+      "duracao": "1 dia",
+      "porcentagem": 0,
+      "descricao": "Impede passagem de seres astrais; ritual de 10 rodadas. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Barreira de fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Barreira de 2 por 5 m; 2 pontos de dano ao atravessar. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Bola de fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Alcance 30 m; dano 1d6+3. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Camuflagem",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Mimetiza a paisagem. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Chama da verdade",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "3 rodadas",
+      "porcentagem": 0,
+      "descricao": "Causa 3 pontos de dano a quem mente com a mão na chama. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Comunhão com a floresta",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Visões em transe. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Comunicar-se com animais",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Troca pensamentos com animais, sem controle. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Comunicação",
+    "type": "feitico",
+    "system": {
+      "custo": 2,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Comunicação breve com seres inteligentes. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Cone de chamas",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Alcance 10 m; dano 1d6+2. Módulo Básico, p. 34. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Conjurar animais",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Convoca animal; preparação de 1 rodada. Módulo Básico, p. 35. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Conjuração",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Variável",
+      "porcentagem": 0,
+      "descricao": "Custo variável por entidade; consultar tabela. Módulo Básico, p. 35. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Controlar animais",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Animal obedece às ordens. Módulo Básico, p. 35."
+    }
+  },
+  {
+    "name": "Controlar entidades",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "24 horas",
+      "porcentagem": 0,
+      "descricao": "Custo igual ao da conjuração. Módulo Básico, p. 35. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Controlar fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 6,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Controla fogo; dano 1d6+1. Módulo Básico, p. 35. Conferir profissão e condições no livro."
+    }
+  },
+  {
+    "name": "Controlar mentes",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "1d6 horas",
+      "porcentagem": 0,
+      "descricao": "Custo: Inteligência do alvo menos 7; ritual de 2 horas; permite RM. Módulo Básico, p. 35–36. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Controlar metais",
+    "type": "feitico",
+    "system": {
+      "custo": 6,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Manipula metal à distância. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Controlar plantas",
+    "type": "feitico",
+    "system": {
+      "custo": 6,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Movimenta plantas em área limitada. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Controlar répteis",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto Oxumaré incorporado",
+      "porcentagem": 0,
+      "descricao": "Controla répteis. Módulo Básico, p. 36. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Controlar água",
+    "type": "feitico",
+    "system": {
+      "custo": 6,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Controla até 50 mil litros de água. Módulo Básico, p. 35."
+    }
+  },
+  {
+    "name": "Criar doenças",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Provoca doença; permite RM. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Criar dor intensa",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Ações difíceis; 2 de dano direto por rodada; permite RM. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Criar ilusão",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "1d6+4 rodadas",
+      "porcentagem": 0,
+      "descricao": "Custo 2 sonora, 4 visual, 6 complexa. Módulo Básico, p. 36. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Criar nevoeiro",
+    "type": "feitico",
+    "system": {
+      "custo": 8,
+      "duracao": "Até dispersar",
+      "porcentagem": 0,
+      "descricao": "Névoa intensa; dificulta ações visuais. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Cura",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Custo 1 por ponto recuperado; 10 para eliminar doença ou veneno. Módulo Básico, p. 36. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Dardos de metal",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Arremessa dardos de metal. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Dardos de pedra",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Dano 1d6. Módulo Básico, p. 36."
+    }
+  },
+  {
+    "name": "Desviar ataques",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Desvia ataque; resultado 01–05 devolve ataque. Módulo Básico, p. 36–37."
+    }
+  },
+  {
+    "name": "Detectar magia",
+    "type": "feitico",
+    "system": {
+      "custo": 2,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Revela seres e objetos mágicos até 10 m. Módulo Básico, p. 37."
+    }
+  },
+  {
+    "name": "Duplo",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto Ibeji incorporado",
+      "porcentagem": 0,
+      "descricao": "Cria duplicata ilusória e imaterial. Módulo Básico, p. 37. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Elo mental com animais",
+    "type": "feitico",
+    "system": {
+      "custo": 2,
+      "duracao": "Indeterminada",
+      "porcentagem": 0,
+      "descricao": "Vínculo sensorial com animal; regras especiais no livro. Módulo Básico, p. 37."
+    }
+  },
+  {
+    "name": "Escudo de força",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto Oxalá incorporado",
+      "porcentagem": 0,
+      "descricao": "Cria escudo místico. Módulo Básico, p. 37. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Espada de Ogum",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto incorporado",
+      "porcentagem": 0,
+      "descricao": "Cria espada brilhante. Módulo Básico, p. 37. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Evocação divina",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "1d6+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Custo por nível: 3, 12 ou 50. Módulo Básico, p. 37. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Exorcismo",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Custo por nível: 3, 8 ou 20. Módulo Básico, p. 37–38. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Extinguir fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 2,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Apaga fogo. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Força de Ogum",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto incorporado",
+      "porcentagem": 0,
+      "descricao": "Força +10. Módulo Básico, p. 38. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Imunidade ao fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "1d6 rodadas",
+      "porcentagem": 0,
+      "descricao": "Imunidade ao fogo. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Invocar tempestades",
+    "type": "feitico",
+    "system": {
+      "custo": 10,
+      "duracao": "2d6+6 rodadas",
+      "porcentagem": 0,
+      "descricao": "Ritual de 6 rodadas; área 1 km². Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Levitar",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "2d6 rodadas",
+      "porcentagem": 0,
+      "descricao": "Controla altitude; deslocamento lateral depende de força externa. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Localizar ferro",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Localiza ferro em raio de 10 km. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Localizar água",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Localiza água em raio de 10 km. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Luz divina",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Dano 1d6+2 apenas contra seres malignos. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Lâmina de fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+3 rodadas",
+      "porcentagem": 0,
+      "descricao": "Arma causa mais 5 de dano. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Machado certeiro",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto Xangô incorporado",
+      "porcentagem": 0,
+      "descricao": "Machado retorna após arremesso; dano 1d6+3. Módulo Básico, p. 38. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Mau olhado",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Dano direto 1d6; alcance 20 m; permite RM. Módulo Básico, p. 38."
+    }
+  },
+  {
+    "name": "Medo",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6 ou até romper ritual",
+      "porcentagem": 0,
+      "descricao": "Pânico; permite RM. Módulo Básico, p. 38–39."
+    }
+  },
+  {
+    "name": "Metamorfose",
+    "type": "feitico",
+    "system": {
+      "custo": 6,
+      "duracao": "Variável",
+      "porcentagem": 0,
+      "descricao": "Transformação em animal; novo teste e custo para retornar. Módulo Básico, p. 39."
+    }
+  },
+  {
+    "name": "Moldar metais",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Molda metal manualmente. Módulo Básico, p. 39."
+    }
+  },
+  {
+    "name": "Pele de ferro",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+3 rodadas",
+      "porcentagem": 0,
+      "descricao": "Proteção física de 12 pontos. Módulo Básico, p. 39."
+    }
+  },
+  {
+    "name": "Percepção de inimigos",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Percebe hostilidade iminente até 20 m. Módulo Básico, p. 39."
+    }
+  },
+  {
+    "name": "Punho de ferro",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Dano impactante 1d6+2. Módulo Básico, p. 39."
+    }
+  },
+  {
+    "name": "Punho de fogo",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Dano impactante 1d6+1; desgaste do couro. Módulo Básico, p. 39–40."
+    }
+  },
+  {
+    "name": "Purificar água",
+    "type": "feitico",
+    "system": {
+      "custo": 2,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Purifica até 10 litros. Módulo Básico, p. 40."
+    }
+  },
+  {
+    "name": "Relâmpago",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "—",
+      "porcentagem": 0,
+      "descricao": "Dano 1d6+3; alcance 100 m. Módulo Básico, p. 40."
+    }
+  },
+  {
+    "name": "Remover encantos e feitiços",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Variável",
+      "porcentagem": 0,
+      "descricao": "Custo e preparação dependem do efeito removido. Módulo Básico, p. 40. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Resistência",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Aumenta resistência em 10. Módulo Básico, p. 40."
+    }
+  },
+  {
+    "name": "Respirar sob as águas",
+    "type": "feitico",
+    "system": {
+      "custo": 3,
+      "duracao": "1d6+4 rodadas",
+      "porcentagem": 0,
+      "descricao": "Respiração subaquática. Módulo Básico, p. 41."
+    }
+  },
+  {
+    "name": "Toque da morte",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "Enquanto houver contato",
+      "porcentagem": 0,
+      "descricao": "Dano direto 1d6+2 por rodada; RM difícil obrigatória. Módulo Básico, p. 41."
+    }
+  },
+  {
+    "name": "Trevas",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "1d6+1 rodadas",
+      "porcentagem": 0,
+      "descricao": "Escuridão em 10 m² por 3 m de altura. Módulo Básico, p. 41."
+    }
+  },
+  {
+    "name": "Viagem astral",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Variável",
+      "porcentagem": 0,
+      "descricao": "Custo 5 na primeira rodada e 1 por rodada seguinte. Módulo Básico, p. 41. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  },
+  {
+    "name": "Visão astral",
+    "type": "feitico",
+    "system": {
+      "custo": 5,
+      "duracao": "1d6+2 rodadas",
+      "porcentagem": 0,
+      "descricao": "Permite ver plano astral. Módulo Básico, p. 41."
+    }
+  },
+  {
+    "name": "Visão noturna",
+    "type": "feitico",
+    "system": {
+      "custo": 4,
+      "duracao": "1d6+3 rodadas",
+      "porcentagem": 0,
+      "descricao": "Visão no escuro, inclusive nas trevas mágicas. Módulo Básico, p. 41."
+    }
+  },
+  {
+    "name": "Voar com os ventos",
+    "type": "feitico",
+    "system": {
+      "custo": 0,
+      "duracao": "Enquanto Iansã incorporada",
+      "porcentagem": 0,
+      "descricao": "Voo curto de até 30 m. Módulo Básico, p. 41. Custo zero no cadastro: confirmar custo variável ou incorporação antes de usar."
+    }
+  }
+]

@@ -1,0 +1,530 @@
+[
+  {
+    "name": "Colete de couro leve",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Defesa; preço: 2000 réis. Módulo Básico, p. 44. Resistência 7; absorção -1/-3.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Colete de couro rígido",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Defesa; preço: 3000 réis. Módulo Básico, p. 44. Resistência 10; absorção -2/-4.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Escudo",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Defesa; preço: 2500 réis. Módulo Básico, p. 44. Resistência 12; absorção -2/-3.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Laudel",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Defesa; preço: 1000 réis. Módulo Básico, p. 44. Resistência 4 por área; sem absorção.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Par de braçadeiras",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Defesa; preço: 1000 réis. Módulo Básico, p. 44. Resistência 3; absorção -1/0.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Dardos (unidade)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Munição; preço: 5 réis. Módulo Básico, p. 44.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Flechas (unidade)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Munição; preço: 10 réis. Módulo Básico, p. 44.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Pólvora, balas e chumbo (10 disparos)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Munição; preço: 500 réis. Módulo Básico, p. 44.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Botas",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 1000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Chapéu",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 300 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Cinturão de couro",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 250 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Luvas de couro",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 700 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Manto com capuz",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 400 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Roupa de algodão trabalhada",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Roupa simples",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 320–400 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Roupa de luxo masculina",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 8500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Roupa de luxo feminina",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 20000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Baeta (metro)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 300 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Perpetuana (metro)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 640 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Tafetá (metro)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 640 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Bacaxim (metro)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 160 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Linho (metro)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Vestimentas; preço: 620 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Barco à remo",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 2500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Boi",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 30000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Canoa",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 1500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Carro de boi",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 20000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Carroça",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 30000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Cavalo",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 40000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Cavalo de tração",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 50000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Mula",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Transportes; preço: 20000 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Corda (10 m, 150 kg)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 200 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Corda grossa (10 m, 400 kg)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Enxada",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 400 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Ferramentas de garimpo",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Gancho",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 800 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Gazuas",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Martelo",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Pá",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 300 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Pé de cabra",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 150 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Picareta",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Ferramentas; preço: 500 réis. Módulo Básico, p. 45.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Aljava",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 200 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Cão de caça",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 1000 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Flauta",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 500 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Manta de lã grossa",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 600 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Mochila",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 200 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Odre individual (0,6 L)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 50 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Odre pequeno (5 L)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 150 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Odre grande (25 L)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 250 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Papel (50 folhas)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 128 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Pederneira",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 50 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Rede de dormir",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 400 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Rede de pesca",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 600 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Sacola (5 kg)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 50 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Símbolo sagrado",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 450 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Tocha",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 150 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Viola",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Geral; preço: 2000 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Aluguel mensal de casa grande",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 8000 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Carne de porco (arroba)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 640 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Estábulo (diária)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 60 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Farinha de trigo (20 kg)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 240 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Hospedagem (diária)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 100 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Ração para viagem (5 dias)",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 50 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Refeição simples",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 100 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Refeição completa",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Alimentos e serviços; preço: 200 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Maleta médica",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Médico; preço: 450 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  },
+  {
+    "name": "Remédios e ervas",
+    "type": "equipamento",
+    "system": {
+      "descricao": "Médico; preço: 200 réis. Módulo Básico, p. 46.",
+      "quantidade": 1
+    }
+  }
+]

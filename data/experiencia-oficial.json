@@ -1,0 +1,65 @@
+{
+  "fonte": "Módulo Básico, 1992, segunda tiragem, p. 48",
+  "limiares": [
+    {
+      "nivel": 1,
+      "experiencia": 0
+    },
+    {
+      "nivel": 2,
+      "experiencia": 11
+    },
+    {
+      "nivel": 3,
+      "experiencia": 21
+    },
+    {
+      "nivel": 4,
+      "experiencia": 31
+    },
+    {
+      "nivel": 5,
+      "experiencia": 46
+    },
+    {
+      "nivel": 6,
+      "experiencia": 61
+    },
+    {
+      "nivel": 7,
+      "experiencia": 76
+    },
+    {
+      "nivel": 8,
+      "experiencia": 91
+    },
+    {
+      "nivel": 9,
+      "experiencia": 111
+    },
+    {
+      "nivel": 10,
+      "experiencia": 131
+    },
+    {
+      "nivel": 11,
+      "experiencia": 151
+    },
+    {
+      "nivel": 12,
+      "experiencia": 171
+    },
+    {
+      "nivel": 13,
+      "experiencia": 201
+    },
+    {
+      "nivel": 14,
+      "experiencia": 231
+    },
+    {
+      "nivel": 15,
+      "experiencia": 261
+    }
+  ]
+}

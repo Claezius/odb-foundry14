@@ -1,0 +1,86 @@
+{
+  "id": "odb-foundry14",
+  "title": "O Desafio dos Bandeirantes",
+  "description": "Ficha clássica, aprendizado, magia, combate, criação e catálogos. Candidata a lançamento; homologação no Foundry pendente.",
+  "version": "1.0.0-rc.29",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Projeto comunitário O Desafio dos Bandeirantes"
+    }
+  ],
+  "esmodules": [
+    "module/main.mjs"
+  ],
+  "styles": [
+    "styles/odb.css"
+  ],
+  "languages": [
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
+  ],
+  "packs": [
+    {
+      "name": "habilidades",
+      "label": "Habilidades",
+      "path": "packs/habilidades",
+      "type": "Item",
+      "system": "odb-foundry14",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "armas",
+      "label": "Armas",
+      "path": "packs/armas",
+      "type": "Item",
+      "system": "odb-foundry14",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "equipamentos",
+      "label": "Equipamentos",
+      "path": "packs/equipamentos",
+      "type": "Item",
+      "system": "odb-foundry14",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "feiticos",
+      "label": "Feitiços",
+      "path": "packs/feiticos",
+      "type": "Item",
+      "system": "odb-foundry14",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "bestiario",
+      "label": "Bestiário",
+      "path": "packs/bestiario",
+      "type": "Actor",
+      "system": "odb-foundry14",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ]
+}

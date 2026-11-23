@@ -1,0 +1,1 @@
+RC23: cadastro separado de escudo e armadura. Campos antigos de resistência e absorção mantidos como escudo; defesa antiga preservada sem edição visual. Terceira linha ainda sem cadastro. Testar no Foundry 14.

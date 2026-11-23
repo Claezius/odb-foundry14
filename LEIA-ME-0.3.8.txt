@@ -1,0 +1,5 @@
+ODB Sistema Básico 0.3.8 — Planejamento de evolução de habilidades
+
+Novo painel somente de leitura: escolha uma habilidade, nível desejado e custo de PE informado pelo Mestre. Exibe saldo hipotético e insuficiência de PE. Não altera nem salva Actor, Item ou Chat; não presume regras oficiais de custo.
+
+Preserva a ficha clássica e funcionalidades anteriores. Faça backup antes de instalar. Testes estáticos efetuados; execução no Foundry 14 ainda precisa de teste.

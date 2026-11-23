@@ -1,0 +1,1 @@
+Módulo Básico p. 48: ganhos de PM/PD e RM. Mestre registra uma vez por nível de destino. Não aplica automaticamente; integração futura. Não use recálculo inicial para personagens evoluídos. Sem teste no Foundry; concorrência entre clientes não garantida.

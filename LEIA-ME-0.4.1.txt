@@ -1,0 +1,4 @@
+ODB v0.4.1 — Auditoria de evolução
+Novo: resumo do histórico das últimas 30 evoluções, soma dos custos de PE e aviso de inconsistências numéricas. Apenas leitura; não altera fichas.
+Corrigida estrutura do ZIP: pasta odb-foundry14 na raiz.
+Faça backup antes de instalar. Teste no Foundry 14 ainda necessário.

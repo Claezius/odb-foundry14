@@ -1,0 +1,10 @@
+O DESAFIO DOS BANDEIRANTES — v0.2.0
+
+Base: v0.1.8, cuja abertura e salvamento foram confirmados pelo usuário.
+Alterações: editor de habilidades e armas abaixo da ficha clássica; criação e exclusão de itens.
+Nenhuma alteração nas coordenadas da imagem, no template.json ou no modelo dos personagens.
+
+ANTES DE INSTALAR: faça backup do mundo e da pasta odb-foundry14.
+Feche o Foundry, substitua a pasta e reinicie.
+Teste em um personagem de teste, criando e editando uma habilidade.
+O pacote passou em checagem estática, mas NÃO foi executado no Foundry VTT 14 neste ambiente.

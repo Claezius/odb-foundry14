@@ -1,0 +1,528 @@
+[
+  {
+    "nome": "Luta com arco e flecha",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Luta com chicote",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com duas armas",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com espada/facão",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com faca/adaga",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador",
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Luta com lança/azagaia",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com machado",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com arcabuz/escopeta",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com pistola/garrucha",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com porrete/tacape",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Luta com rede",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Luta com zarabatana",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador",
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Luta desarmada",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Montar animais",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Manejo de armas de grande porte",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Manejo de explosivos",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Reparar armaduras (couro)",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Guerreiro"
+    ]
+  },
+  {
+    "nome": "Reparar armas (especificar)",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Percepção",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador",
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Conhecimento da mata",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Rastreador",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Cultura indígena",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Rastreador",
+      "Pajé",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Ervas e plantas/remédios",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Rastreador",
+      "Pajé",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Ervas e plantas/venenos",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Rastreador",
+      "Pajé",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Seguir trilhas",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Técnicas de sobrevivência",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Rastreador",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Escalar",
+    "atributo": "destreza",
+    "carreiras": [
+      "Rastreador",
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Técnicas de camuflagem",
+    "atributo": "destreza",
+    "carreiras": [
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Preparar armadilhas",
+    "atributo": "destreza",
+    "carreiras": [
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Mover-se silenciosamente",
+    "atributo": "destreza",
+    "carreiras": [
+      "Rastreador",
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Nadar",
+    "atributo": "destreza",
+    "carreiras": [
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Pacificar animais",
+    "atributo": "carisma",
+    "carreiras": [
+      "Rastreador"
+    ]
+  },
+  {
+    "nome": "Abrir fechaduras",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Avaliar jóias",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Acrobacia",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Ataque surpresa",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Detectar armadilha",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Escapar de amarras",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Esconder-se nas sombras",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Estrangular com fio",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Furtar",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Manuseio de venenos",
+    "atributo": "destreza",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Diplomacia/persuasão",
+    "atributo": "carisma",
+    "carreiras": [
+      "Ladrão",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Comércio e negociação",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Ladrão"
+    ]
+  },
+  {
+    "nome": "Caça e pesca",
+    "atributo": "destreza",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Conduzir carroças",
+    "atributo": "destreza",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Correr",
+    "atributo": "destreza",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Imitar sons",
+    "atributo": "destreza",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Lidar com o gado",
+    "atributo": "destreza",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Cultura negra",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Decifrar códigos",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "História antiga",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "História local e contemporânea",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Idiomas brancos",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Idiomas indígenas",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Idiomas negros",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Legislação",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Ler e escrever",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Medicina",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Mineração",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Navegar",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Ocultismo - mitos e lendas",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional",
+      "Pajé"
+    ]
+  },
+  {
+    "nome": "Religião",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional",
+      "Jesuíta"
+    ]
+  },
+  {
+    "nome": "Tocar instrumentos (especificar)",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Veterinária",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Treinar animais",
+    "atributo": "sabedoria",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Jogos de azar",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Ler lábios",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Navegação terrestre",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Senso de orientação",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Técnicas de memorização",
+    "atributo": "inteligencia",
+    "carreiras": [
+      "Opcional"
+    ]
+  },
+  {
+    "nome": "Esquiva",
+    "atributo": "destreza",
+    "carreiras": [
+      "Guerreiro",
+      "Rastreador",
+      "Ladrão"
+    ]
+  }
+]

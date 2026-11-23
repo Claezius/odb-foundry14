@@ -1,0 +1,166 @@
+{
+  "Actor": {
+    "types": [
+      "personagem",
+      "npc"
+    ],
+    "templates": {
+      "base": {
+        "identidade": {
+          "jogador": "",
+          "sexo": "",
+          "idade": "",
+          "nivel": 1,
+          "raca": "",
+          "profissao": "",
+          "classeSocial": "",
+          "altura": "",
+          "peso": ""
+        },
+        "atributos": {
+          "forca": {
+            "racial": 0,
+            "profissao": 0,
+            "gastos": 0,
+            "final": 0
+          },
+          "destreza": {
+            "racial": 0,
+            "profissao": 0,
+            "gastos": 0,
+            "final": 0
+          },
+          "resistencia": {
+            "racial": 0,
+            "profissao": 0,
+            "gastos": 0,
+            "final": 0
+          },
+          "inteligencia": {
+            "racial": 0,
+            "profissao": 0,
+            "gastos": 0,
+            "final": 0
+          },
+          "sabedoria": {
+            "racial": 0,
+            "profissao": 0,
+            "gastos": 0,
+            "final": 0
+          },
+          "carisma": {
+            "racial": 0,
+            "profissao": 0,
+            "gastos": 0,
+            "final": 0
+          },
+          "sorte": {
+            "gastos": 0,
+            "final": 0
+          }
+        },
+        "recursos": {
+          "pv": {
+            "value": 0,
+            "max": 0
+          },
+          "pm": {
+            "value": 0,
+            "max": 0
+          },
+          "pd": {
+            "value": 0,
+            "max": 0
+          },
+          "bd": 0,
+          "rm": 0,
+          "vb": 0,
+          "dinheiro": 0,
+          "experiencia": 0
+        },
+        "combate": {
+          "defesa": 0,
+          "resistencia": 0,
+          "absorcaoCortante": 0,
+          "absorcaoImpactante": 0,
+          "condicoes": "",
+          "escudoNome": "",
+          "coleteNome": "",
+          "coleteResistencia": 0,
+          "coleteCortante": 0,
+          "coleteImpactante": 0,
+          "extraNome": "",
+          "extraResistencia": 0,
+          "extraCortante": 0,
+          "extraImpactante": 0
+        }
+      }
+    },
+    "personagem": {
+      "templates": [
+        "base"
+      ]
+    },
+    "npc": {
+      "templates": [
+        "base"
+      ]
+    }
+  },
+  "Item": {
+    "types": [
+      "habilidade",
+      "arma",
+      "equipamento",
+      "feitico",
+      "encanto"
+    ],
+    "templates": {
+      "base": {
+        "descricao": ""
+      }
+    },
+    "habilidade": {
+      "templates": [
+        "base"
+      ],
+      "categoria": "geral",
+      "atributoBase": "",
+      "pontosGastos": 0,
+      "nivel": 0,
+      "porcentagem": 0
+    },
+    "arma": {
+      "templates": [
+        "base"
+      ],
+      "dano": "",
+      "alcance": "",
+      "municao": 0,
+      "descarregada": false
+    },
+    "equipamento": {
+      "templates": [
+        "base"
+      ],
+      "peso": 0,
+      "quantidade": 1
+    },
+    "feitico": {
+      "templates": [
+        "base"
+      ],
+      "custo": 0,
+      "duracao": "",
+      "porcentagem": 0
+    },
+    "encanto": {
+      "templates": [
+        "base"
+      ],
+      "custo": 0,
+      "duracao": "",
+      "porcentagem": 0
+    }
+  }
+}

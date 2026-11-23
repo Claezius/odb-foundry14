@@ -1,0 +1,6 @@
+ODB Sistema Básico v0.4.5 — Comparação de progressão
+
+Novo: compare o arquivo JSON exportado pela v0.4.4 com os valores atuais do mesmo personagem.
+A comparação é somente leitura; não altera níveis, PE, atributos, habilidades ou histórico.
+A identificação é feita pelo ID do personagem. O arquivo deve ter até 2 MB.
+Faça backup do mundo antes de instalar. Teste no Foundry VTT 14.

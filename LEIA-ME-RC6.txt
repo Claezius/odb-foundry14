@@ -1,0 +1,1 @@
+RC6 — consolidação técnica da RC5. Corrige documentação desatualizada e prevenção de registros duplicados no mesmo lote. Mantém regras, ficha e catálogos. Sem aventuras. Homologação no Foundry e revisão de conteúdo ainda pendentes. Faça backup antes de instalar.

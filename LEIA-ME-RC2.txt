@@ -1,0 +1,1 @@
+RC2: nove abas no topo da ficha. A ficha clássica é a aba inicial. A aba selecionada permanece durante novas renderizações da mesma janela. Nenhuma regra foi alterada. Teste no Foundry pendente.

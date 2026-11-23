@@ -1,0 +1,8 @@
+ODB Foundry 14 — v0.3.7
+
+Novo painel de conferência aritmética dos atributos (somente leitura).
+Compara valores raciais, profissionais e gastos com valor final salvo.
+Para Sorte, compara apenas gastos e final, pois não há campos racial/profissão.
+Não altera dados, não consome PE e não afirma regras oficiais de evolução.
+
+Faça backup antes de substituir o sistema. Teste em um mundo de cópia.

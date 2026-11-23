@@ -1,0 +1,3 @@
+ODB 0.4.6 — Diagnóstico de progressão (somente leitura)
+Confere composição aritmética dos atributos, validade de nível e PE, valores de habilidades e consistência do histórico disponível. Exporta relatório JSON. Não calcula custos oficiais nem altera fichas.
+Faça backup antes de instalar. Teste em Foundry VTT 14.

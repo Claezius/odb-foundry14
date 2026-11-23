@@ -1,0 +1,4 @@
+Versão 0.1.6 — alinhamento de campos sobre a ficha original.
+Preserva os caminhos de dados e o salvamento da 0.1.2.
+Antes de substituir, faça cópia de segurança da pasta do sistema e do mundo.
+Não testado em execução no Foundry; validar com uma captura.

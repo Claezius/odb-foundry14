@@ -1,0 +1,1 @@
+ODB 0.2.9 — Ajuste manual e confirmado de PV. Base 0.2.8. Faça backup do mundo e do sistema antes de instalar. Não altera regras de combate nem os dados existentes na instalação. Validação em Foundry pendente.

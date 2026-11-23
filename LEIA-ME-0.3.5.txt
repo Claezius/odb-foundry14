@@ -1,0 +1,5 @@
+ODB v0.3.5 — Progressão manual de habilidades
+
+Novo painel para alterar nível de habilidade cadastrada, com confirmação e registro no chat.
+Não desconta PE nem altera porcentagem. Regras de custo devem ser verificadas no livro original.
+Faça backup antes de instalar. Não testado em execução no Foundry VTT 14.

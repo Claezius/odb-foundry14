@@ -1,0 +1,11 @@
+O DESAFIO DOS BANDEIRANTES — 0.1.5 (FICHA CLÁSSICA)
+
+Base: versão 0.1.4, mantendo a gravação por evento change confirmada na 0.1.2.
+A ficha original do PDF enviado foi renderizada como fundo (assets/ficha-classica.png).
+Campos editáveis transparentes são posicionados sobre a ficha impressa.
+A criação de habilidades e armas usa documentos Item do personagem.
+
+INSTALAÇÃO: faça backup da pasta do sistema e do mundo; feche Foundry; substitua a pasta Data/systems/odb-foundry14 pela pasta do ZIP; reinicie.
+TESTE: altere Jogador e Idade, pressione Tab, feche e reabra. Teste outros campos e criação de uma habilidade.
+
+ATENÇÃO: ainda não foi testado dentro do Foundry VTT 14. Layout baseado na única página do PDF; recursos sem posição própria no impresso ficam na seção complementar. Nenhuma regra de cálculo foi automatizada.

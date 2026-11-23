@@ -1,0 +1,1 @@
+Planejamento dos 50 pontos por nível (Módulo Básico, p. 48). Somente simulação de aumentos em habilidades existentes: não calcula custos progressivos, testes ou aquisição de novas habilidades. Não altera PE ou fichas. Testar no Foundry 14.

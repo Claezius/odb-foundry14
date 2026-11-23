@@ -1,0 +1,1 @@
+RC13: transferência de uma unidade de flechas ou pacote de dez disparos para reserva da arma; não recarrega automaticamente. Validação de quantidades e soma de pesos cadastrados. Catálogo de RC12 mantido sem revisão integral do livro. Teste no Foundry pendente.

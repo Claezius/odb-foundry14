@@ -1,0 +1,1 @@
+Gerenciamento do catálogo compartilhado: resumo, exportação JSON e remoção exclusiva do Mestre com confirmação. Painel nas fichas. Nenhuma mudança nos dados dos personagens. Teste no Foundry pendente.

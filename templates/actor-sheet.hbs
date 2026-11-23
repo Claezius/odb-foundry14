@@ -1,0 +1,413 @@
+<form class="odb-classic-form" autocomplete="off">
+  <nav class="odb-sheet-tabs" aria-label="Seções da ficha" role="tablist">
+    <button type="button" role="tab" data-odb-tab="ficha" aria-selected="true" tabindex="0"><i class="fa-solid fa-scroll" aria-hidden="true"></i> Ficha clássica</button>
+    <button type="button" role="tab" data-odb-tab="atributos" aria-selected="false" tabindex="-1"><i class="fa-solid fa-user" aria-hidden="true"></i> Atributos</button>
+    <button type="button" role="tab" data-odb-tab="habilidades" aria-selected="false" tabindex="-1"><i class="fa-solid fa-list" aria-hidden="true"></i> Habilidades</button>
+    <button type="button" role="tab" data-odb-tab="combate" aria-selected="false" tabindex="-1"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Combate</button>
+    <button type="button" role="tab" data-odb-tab="inventario" aria-selected="false" tabindex="-1"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Equipamentos</button>
+    <button type="button" role="tab" data-odb-tab="magia" aria-selected="false" tabindex="-1"><i class="fa-solid fa-wand-sparkles" aria-hidden="true"></i> Magia</button>
+    <button type="button" role="tab" data-odb-tab="evolucao" aria-selected="false" tabindex="-1"><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Evolução</button>
+    <button type="button" role="tab" data-odb-tab="historico" aria-selected="false" tabindex="-1"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> Histórico e backup</button>
+    <button type="button" role="tab" data-odb-tab="criacao" aria-selected="false" tabindex="-1"><i class="fa-solid fa-book" aria-hidden="true"></i> Criação e compêndios</button>
+  </nav>
+  <section class="odb-tab-panel" role="tabpanel" aria-label="Ficha clássica" data-odb-panel="ficha">
+  <div class="odb-classic-toolbar"><strong>Ficha clássica — O Desafio dos Bandeirantes</strong><span>Campos transparentes sobre o original • clique para editar</span></div>
+  <div class="odb-classic-page" aria-label="Ficha clássica de personagem">
+    {{#each campos as |campo|}}
+    <input class="odb-slot" type="{{campo.kind}}" data-odb-path="{{campo.path}}" value="{{campo.value}}"
+      {{#unless ../actor.isOwner}}readonly{{/unless}} title="{{campo.label}}" aria-label="{{campo.label}}" style="left:{{campo.x}}%;top:{{campo.y}}%;width:{{campo.w}}%;height:{{campo.h}}%;">
+    {{/each}}
+    <section class="odb-appearance" aria-label="Aparência do personagem">
+      <h2>Aparência do Personagem</h2>
+      <button type="button" class="odb-portrait" {{#unless actor.isOwner}}disabled{{/unless}} title="Selecionar imagem do personagem" aria-label="Selecionar imagem do personagem">
+        <img class="odb-portrait-image" src="{{actor.img}}" alt="Retrato de {{actor.name}}">
+        <img class="odb-portrait-frame" src="systems/odb-foundry14/assets/moldura-barroca.png" alt="">
+      </button>
+    </section>
+  </div>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Atributos" data-odb-panel="atributos" hidden>
+    <section class="odb-calculos" aria-label="Prévia dos cálculos">
+      <h3>Prévia de cálculos — sem gravação automática</h3>
+      <p>Fórmulas da ficha impressa. Confira os resultados antes de aplicá-los. BD e Sorte continuam manuais.</p>
+      <div class="odb-calculos-grid">
+        {{#each previsoesODB as |calc|}}
+          <div><strong>{{calc.rotulo}}</strong> <span>Atual: {{calc.atual}}</span> <span>Calculado: {{calc.valor}}</span></div>
+        {{/each}}
+      </div>
+      <button type="button" class="odb-aplicar-calculos">Aplicar cálculos ao personagem (com confirmação)</button>
+    </section>
+    <section class="odb-attribute-audit" aria-label="Conferência da composição dos atributos">
+      <h3>Conferência — composição dos atributos</h3>
+      <p>Comparação informativa entre a soma dos campos racial, profissão e pontos gastos e o valor final salvo. Não corrige nem altera nenhum valor.</p>
+      <div class="odb-editor-scroll"><table class="odb-editor-table"><thead><tr><th>Atributo</th><th>Racial</th><th>Profissão</th><th>Gastos</th><th>Soma</th><th>Final salvo</th><th>Conferência</th></tr></thead><tbody class="odb-attribute-audit-rows"></tbody></table></div>
+      <p class="odb-attribute-audit-summary" aria-live="polite"></p>
+      <button type="button" class="odb-attribute-audit-refresh">Atualizar conferência</button>
+    </section>
+    <section class="odb-attribute-progression" aria-label="Ajuste manual de atributos">
+      <h3>Correção manual — atributos (Mestre)</h3>
+      <p>Ajuste somente o valor final de um atributo, com confirmação. Os valores racial, profissão, pontos gastos, PE e recursos derivados não serão modificados automaticamente.</p>
+      <div class="odb-attribute-progression-grid">
+        <label>Atributo<select class="odb-attribute-select">
+          <option value="">Selecione um atributo</option>
+          <option value="forca">Força</option><option value="destreza">Destreza</option>
+          <option value="resistencia">Resistência</option><option value="inteligencia">Inteligência</option>
+          <option value="sabedoria">Sabedoria</option><option value="carisma">Carisma</option>
+          <option value="sorte">Sorte</option>
+        </select></label>
+        <label>Novo valor final<input class="odb-attribute-target" type="number" min="0" max="999" step="1" value="0"></label>
+        <label>Motivo (opcional)<input class="odb-attribute-note" type="text" maxlength="300" placeholder="Ex.: evolução autorizada pelo Mestre"></label>
+      </div>
+      <p class="odb-attribute-preview" aria-live="polite">Selecione um atributo.</p>
+      <button type="button" class="odb-attribute-apply">Confirmar ajuste do atributo</button>
+    </section>
+    <h3>Controles complementares</h3>
+    <div class="odb-extra-fields">
+      <label>PV atual <input type="number" name="system.recursos.pv.value" value="{{system.recursos.pv.value}}"></label>
+      <label>PV total <input type="number" name="system.recursos.pv.max" value="{{system.recursos.pv.max}}"></label>
+      <label>PM atual <input type="number" name="system.recursos.pm.value" value="{{system.recursos.pm.value}}"></label>
+      <label>PD atual <input type="number" name="system.recursos.pd.value" value="{{system.recursos.pd.value}}"></label>
+    </div>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Habilidades" data-odb-panel="habilidades" hidden>
+    <section class="odb-rolagens" aria-label="Rolagens manuais">
+      <h3>Rolagens manuais — habilidades e armas</h3>
+      <p>Teste percentual: 1d100 igual ou menor que a porcentagem cadastrada. Dano: usa a expressão de dados da arma. Não altera PV, munição ou itens. Confirme as regras com o livro antes de usar em campanha.</p>
+      <div class="odb-rolagens-grid">
+        <div><h4>Habilidades</h4>
+          {{#each rolagensHabilidades as |item|}}
+          <button type="button" class="odb-roll-habilidade" data-item-id="{{item.id}}" title="Rolar 1d100">{{item.nome}} — {{item.porcentagem}}%</button>
+          {{else}}<p>Nenhuma habilidade cadastrada.</p>{{/each}}
+        </div>
+        <div><h4>Armas — dano</h4>
+          {{#each rolagensArmas as |item|}}
+          <button type="button" class="odb-roll-arma" data-item-id="{{item.id}}" title="Rolar expressão de dano">{{item.nome}} — {{item.dano}}</button>
+          {{else}}<p>Nenhuma arma cadastrada.</p>{{/each}}
+        </div>
+      </div>
+    </section>
+    <p>Habilidades e armas são documentos do personagem. Abra os detalhes pela lista completa de itens.</p>
+    <div class="odb-tool-buttons"><button type="button" data-action="createCareer">+ Habilidade de carreira</button><button type="button" data-action="createGeneral">+ Habilidade geral</button></div>
+    <section class="odb-editor" aria-label="Edição de habilidades e armas">
+      <h3>Habilidades — edição direta</h3>
+      <div class="odb-editor-scroll"><table class="odb-editor-table"><thead><tr><th>Nome</th><th>Categoria</th><th>Atributo</th><th>Pontos</th><th>Nível</th><th>%</th><th></th></tr></thead><tbody>
+      {{#each habilidadesEditor as |item|}}
+      <tr data-odb-item-id="{{item.id}}">
+        <td><input class="odb-editor-input" data-odb-field="name" value="{{item.nome}}" aria-label="Nome da habilidade"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.categoria" value="{{item.categoria}}" aria-label="Categoria: carreira ou geral"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.atributoBase" value="{{item.atributoBase}}" aria-label="Atributo base"></td>
+        <td><input class="odb-editor-input" type="number" data-odb-field="system.pontosGastos" value="{{item.pontosGastos}}" aria-label="Pontos gastos"></td>
+        <td><input class="odb-editor-input" type="number" data-odb-field="system.nivel" value="{{item.nivel}}" aria-label="Nível"></td>
+        <td><input class="odb-editor-input" type="number" data-odb-field="system.porcentagem" value="{{item.porcentagem}}" aria-label="Porcentagem"></td>
+        <td><button type="button" class="odb-delete-item" title="Excluir habilidade">Excluir</button></td>
+      </tr>{{/each}}
+      </tbody></table></div>
+    </section>
+    <details><summary>Lista completa de habilidades e armas</summary>
+      <div class="odb-item-list">{{#each itensFicha as |item|}}<button type="button" data-action="editItem" data-item-id="{{item.id}}">{{item.name}} ({{item.type}})</button>{{/each}}</div>
+    </details>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Combate" data-odb-panel="combate" hidden>
+    <section class="odb-oficial-combate">
+      <h3>Proteções cadastradas</h3>
+      <p>Edite o escudo, o colete e a proteção adicional separadamente. Salve cada campo ao sair dele, ou use Cadastrar proteção nova abaixo.</p>
+      <div class="odb-combate-grid">
+      <label>Escudo — nome<input name="system.combate.escudoNome" value="{{system.combate.escudoNome}}"></label>
+      <label>Escudo — resistência<input type="number" min="0" name="system.combate.resistencia" value="{{system.combate.resistencia}}"></label>
+      <label>Escudo — absorção cortante<input type="number" min="0" name="system.combate.absorcaoCortante" value="{{system.combate.absorcaoCortante}}"></label>
+      <label>Escudo — absorção impactante<input type="number" min="0" name="system.combate.absorcaoImpactante" value="{{system.combate.absorcaoImpactante}}"></label>
+      <label>Colete — nome<input name="system.combate.coleteNome" value="{{system.combate.coleteNome}}"></label>
+      <label>Colete — resistência<input type="number" min="0" name="system.combate.coleteResistencia" value="{{system.combate.coleteResistencia}}"></label>
+      <label>Colete — absorção cortante<input type="number" min="0" name="system.combate.coleteCortante" value="{{system.combate.coleteCortante}}"></label>
+      <label>Colete — absorção impactante<input type="number" min="0" name="system.combate.coleteImpactante" value="{{system.combate.coleteImpactante}}"></label>
+      <label>Proteção adicional — nome<input name="system.combate.extraNome" value="{{system.combate.extraNome}}"></label>
+      <label>Proteção adicional — resistência<input type="number" min="0" name="system.combate.extraResistencia" value="{{system.combate.extraResistencia}}"></label>
+      <label>Proteção adicional — absorção cortante<input type="number" min="0" name="system.combate.extraCortante" value="{{system.combate.extraCortante}}"></label>
+      <label>Proteção adicional — absorção impactante<input type="number" min="0" name="system.combate.extraImpactante" value="{{system.combate.extraImpactante}}"></label>
+      </div><output aria-live="polite" style="display:block;position:sticky;top:0;z-index:3;padding:10px;margin:8px 0;background:#211c28;border:1px solid #a48d70;color:#f5e7cf;font-weight:bold;">Informe os valores do combate.</output>
+      <h3>Combate oficial — Parte II</h3>
+      <button type="button" data-official="init">Iniciativa 1d10</button>
+      <div class="odb-combate-grid">
+      <label>Habilidade de ataque <input class="ata" type="number" min="0" value="40"></label>
+      <label>Habilidade de defesa <input class="def" type="number" min="0" value="40"></label>
+      <label>Modificador ataque <input class="ma" type="number" value="0"></label>
+      <label>Modificador defesa <input class="mb" type="number" value="0"></label>
+      <label><input class="shield" type="checkbox"> Defesa com escudo</label>
+      <button type="button" data-official="duelo">Resolver confronto corpo a corpo</button>
+      <label>Dificuldade percentual <select class="factor"><option value="1">Normal</option><option value="2">Fácil</option><option value="0.5">Difícil</option><option value="0.25">Quase impossível</option></select></label>
+      <button type="button" data-official="disparo">Teste percentual (habilidade de ataque)</button>
+      <button type="button" data-official="falha">Consequência da falha 1d6</button>
+      <label>Alvo localizado <select class="alvo-localizado"><option value="tronco">Tronco</option><option value="cabeca">Cabeça</option><option value="garganta">Garganta</option></select></label><button type="button" data-official="localizado">Calcular dano localizado e dificuldade</button>
+      <label>Dano bruto <input class="damage" type="number" min="0" value="5"></label>
+      <label>Tipo <select class="tipo"><option value="cortante">Cortante</option><option value="impactante">Impactante</option><option value="magico">Mágico sem absorção</option></select></label>
+      <label>Proteção <select class="local"><option value="corpo">Sem proteção</option><option value="colete">Colete</option><option value="extra">Proteção adicional</option><option value="escudo">Escudo</option></select></label>
+      <label>Resistência restante da proteção <input class="res" type="number" min="0" value="10"></label>
+      <label>Absorção correspondente <input class="abs" type="number" min="0" value="2"></label>
+      <label>Proteção nova <select class="preset"><option value="escudo">Escudo</option><option value="leve">Couro leve</option><option value="rigido">Couro rígido</option></select></label><button type="button" data-official="preset">Carregar valores (simulação)</button><button type="button" data-official="cadastrar">Cadastrar proteção nova na ficha</button><button type="button" data-official="ler">Carregar proteção cadastrada</button>
+      <button type="button" data-official="aplicar">Aplicar dano à ficha aberta</button>
+      <button type="button" data-official="protecao">Calcular dano e desgaste</button>
+      <label>Armas do livro <select class="catalogo"></select></label><button type="button" data-official="arma">Adicionar arma (sem cobrar preço)</button>
+      </div>
+      <p>Confronto e cálculo são simulações. Aplicar dano altera PV e resistência cadastrada da ficha aberta somente após confirmação; selecione a proteção efetivamente atingida. Modificadores e dano máximo sob controle do Mestre.</p>
+    </section>
+    <section class="odb-combate-manual" aria-label="Calculadora de dano e proteção">
+      <h3>Combate — calculadora de dano e absorção</h3>
+      <p>Informe o dano recebido e escolha a absorção cadastrada. O resultado é apenas uma estimativa aritmética; não altera PV, munição ou condições. A aplicação das regras fica a cargo do Mestre.</p>
+      <div class="odb-combate-grid">
+        <label>Dano recebido <input type="number" class="odb-dano-entrada" min="0" step="1" value="0"></label>
+        <label>Tipo de proteção <select class="odb-tipo-protecao"><option value="cortante">Cortante</option><option value="impactante">Impactante</option><option value="nenhuma">Sem absorção</option></select></label>
+        <div class="odb-combate-valor">Absorção cadastrada: <strong class="odb-absorcao-preview">—</strong></div>
+        <div class="odb-combate-valor">Dano após subtração: <strong class="odb-dano-preview">—</strong></div>
+      </div>
+      <button type="button" class="odb-publicar-dano">Publicar cálculo no chat</button>
+      <p class="odb-combate-aviso">Não realiza ataque, teste de defesa ou cálculo de ferimentos segundo as regras do livro; apenas subtrai a absorção selecionada do dano informado, com mínimo zero.</p>
+    </section>
+    <section class="odb-testes-combate" aria-label="Rolagens manuais de combate">
+      <h3>Combate — ataque, defesa e iniciativa (rolagens manuais)</h3>
+      <p>Ferramentas de dados, sem automatizar regras não confirmadas. Ataque e defesa: informe a chance percentual definida pelo Mestre. Iniciativa: informe a expressão de dados definida pelo Mestre. Nenhum resultado altera PV, recursos ou turno de combate.</p>
+      <div class="odb-combate-vinculo">
+        <label>Usar porcentagem de habilidade cadastrada
+          <select class="odb-habilidade-combate" aria-label="Selecionar habilidade para teste">
+            <option value="">Selecionar habilidade (opcional)</option>
+            {{#each rolagensHabilidades as |item|}}
+              <option value="{{item.id}}">{{item.nome}} — {{item.porcentagem}}%</option>
+            {{/each}}
+          </select>
+        </label>
+        <button type="button" class="odb-usar-habilidade-ataque">Usar no ataque</button>
+        <button type="button" class="odb-usar-habilidade-defesa">Usar na defesa</button>
+      </div>
+      <p class="odb-combate-aviso">A seleção apenas copia a porcentagem da habilidade para o campo escolhido. Não define automaticamente qual habilidade é apropriada.</p>
+      <div class="odb-combate-vinculo odb-vinculo-arma">
+        <label>Arma cadastrada
+          <select class="odb-arma-combate" aria-label="Selecionar arma para combate">
+            <option value="">Selecionar arma (opcional)</option>
+            {{#each rolagensArmas as |item|}}
+              <option value="{{item.id}}">{{item.nome}} — {{item.dano}}</option>
+            {{/each}}
+          </select>
+        </label>
+        <button type="button" class="odb-rolar-arma-selecionada">Rolar dano da arma selecionada</button>
+        <button type="button" class="odb-disparo-municao">Disparar (consumir munição)</button>
+        <button type="button" class="odb-recarregar-arma">Recarregar (1 rodada)</button>
+        <div class="odb-arma-detalhes" aria-live="polite">Selecione uma arma para ver dano, alcance e munição.</div>
+      </div>
+      <p class="odb-combate-aviso">A arma selecionada não define a chance de acerto; use a habilidade apropriada para preencher o ataque. A rolagem de dano não aplica ferimentos nem consome munição. O botão Disparar usa a chance de ataque abaixo. Controle a reserva de disparos no campo Munição da arma; a recarga ocupa uma rodada, controlada pelo Mestre.</p>
+
+      <div class="odb-testes-grid">
+        <label>Chance de ataque (%) <input class="odb-ataque-alvo" type="number" min="0" max="100" step="1" value="50"></label>
+        <button type="button" class="odb-rolar-ataque">Rolar ataque (1d100)</button>
+        <label>Chance de defesa (%) <input class="odb-defesa-alvo" type="number" min="0" max="100" step="1" value="50"></label>
+        <button type="button" class="odb-rolar-defesa">Rolar defesa (1d100)</button>
+        <label>Expressão de iniciativa <input class="odb-iniciativa-formula" type="text" value="1d10" maxlength="60" aria-label="Expressão de dados para iniciativa"></label>
+        <button type="button" class="odb-rolar-iniciativa">Rolar iniciativa</button>
+      </div>
+      <p class="odb-combate-aviso">Os valores iniciais são exemplos de preenchimento, não regras oficiais. Informe os valores corretos antes de rolar.</p>
+    </section>
+    <div class="odb-ponte-dano">
+      <button type="button" class="odb-usar-dano-no-pv">Copiar dano líquido para ajuste de PV</button>
+      <p>Preenche a quantidade do painel de PV; não desconta pontos automaticamente. Revise e confirme antes de aplicar.</p>
+    </div>
+    <section class="odb-ajuste-pv" aria-label="Ajuste manual de pontos de vida">
+      <h3>Pontos de vida — dano e recuperação</h3>
+      <p>Operação manual, independente das regras de ataque. Não altera PM, PD ou munição.</p>
+      <div class="odb-pv-grid">
+        <label>Operação <select class="odb-pv-operacao"><option value="dano">Descontar dano</option><option value="cura">Recuperar PV</option></select></label>
+        <label>Quantidade de PV <input class="odb-pv-quantidade" type="number" min="1" step="1" value="1"></label>
+      </div>
+      <p class="odb-pv-previa" aria-live="polite"></p>
+      <button type="button" class="odb-pv-aplicar">Aplicar alteração de PV (confirmar)</button>
+      <p class="odb-combate-aviso">PV negativos são preservados. Cura limitada aos PV totais; consequências confirmadas pelo Mestre.</p>
+    </section>
+    <section class="odb-saude"><h3>Estado físico e venenos</h3><output></output><p><button type="button" data-saude="teste">Teste de Resistência</button> <button type="button" data-saude="repouso">Repouso diário (+3 PV)</button></p><label>Veneno <select></select></label><label>Dia (intervalos de 24h) <input type="number" min="1" max="999" value="1"></label><button type="button" data-saude="veneno">Rolar dano (manual)</button><p>Doenças opcionais: Chagas, Febre do sertão, Loucura do sertão, Doença do sono e Raiva. Registre incubação e sintomas nas observações; controle pelo Mestre.</p></section>
+<section class="odb-doencas"><h3>Doenças (controle pelo Mestre)</h3><label>Doença <select></select></label><label>Dia após incubação <input type="number" min="1" value="1"></label><p><output></output></p><button type="button" data-doenca="incubar">Rolar incubação</button><button type="button" data-doenca="dano">Rolar dano diário</button><p>Medicina recupera resistência, sem curar. Ervas e plantas/remédios: Chagas normal; Sono, Febre e Loucura difícil; Raiva não cura. Ervas e plantas/veneno: normal se identificado, difícil caso contrário; cessa o dano e recuperação em um dia. Encanto de cura: 10 pontos de poder para eliminar doença ou veneno, sem recuperar resistência.</p></section>
+    <section class="odb-condicoes-manuais" aria-label="Anotações de condições de combate">
+      <h3>Condições de combate — registro manual</h3>
+      <p>Registre ferimentos, estados e observações conforme decisão do Mestre. Não aplica efeitos automáticos.</p>
+      <label for="odb-condicoes-texto">Condições e observações</label>
+      <textarea id="odb-condicoes-texto" name="system.combate.condicoes" rows="3" maxlength="2000">{{system.combate.condicoes}}</textarea>
+      <button type="button" class="odb-publicar-condicoes">Publicar condições no chat</button>
+    </section>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Equipamentos" data-odb-panel="inventario" hidden>
+    <section class="odb-editor" aria-label="Armas">
+    <button type="button" data-action="createWeapon">+ Arma</button>
+      <h3>Armas — edição direta</h3>
+      <div class="odb-editor-scroll"><table class="odb-editor-table"><thead><tr><th>Nome</th><th>Dano</th><th>Alcance</th><th>Munição</th><th></th></tr></thead><tbody>
+      {{#each armasEditor as |item|}}
+      <tr data-odb-item-id="{{item.id}}">
+        <td><input class="odb-editor-input" data-odb-field="name" value="{{item.nome}}" aria-label="Nome da arma"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.dano" value="{{item.dano}}" aria-label="Dano"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.alcance" value="{{item.alcance}}" aria-label="Alcance"></td>
+        <td><input class="odb-editor-input" type="number" data-odb-field="system.municao" value="{{item.municao}}" aria-label="Munição"></td>
+        <td><button type="button" class="odb-delete-item" title="Excluir arma">Excluir</button></td>
+      </tr>{{/each}}
+      </tbody></table></div>
+    </section>
+    <section class="odb-editor" aria-label="Inventário">
+      <h3>Inventário — equipamentos</h3>
+      <label>Arma <select class="odb-reserva-arma">{{#each armasEditor as |item|}}<option value="{{item.id}}">{{item.nome}}</option>{{/each}}</select></label>
+      <label>Munição <select class="odb-reserva-fonte">{{#each fontesMunicao as |item|}}<option value="{{item.id}}">{{item.nome}}</option>{{/each}}</select></label>
+      <button type="button" class="odb-transferir-municao">Transferir uma unidade/pacote para a arma</button>
+      <p>Peso registrado dos equipamentos: {{pesoInventario}} kg. Não modifica automaticamente os atributos. Pesos desconhecidos permanecem sem estimativa.</p>
+      <button type="button" data-action="createEquipment">+ Equipamento</button>
+      <div class="odb-editor-scroll"><table class="odb-editor-table"><thead><tr><th>Nome</th><th>Peso (kg)</th><th>Quantidade</th><th>Descrição</th><th></th></tr></thead><tbody>
+      {{#each equipamentosEditor as |item|}}
+      <tr data-odb-item-id="{{item.id}}">
+        <td><input class="odb-editor-input" data-odb-field="name" value="{{item.nome}}" aria-label="Nome do equipamento"></td>
+        <td><input class="odb-editor-input" type="number" step="0.01" min="0" data-odb-field="system.peso" value="{{item.peso}}" aria-label="Peso em kg"></td>
+        <td><input class="odb-editor-input" type="number" min="0" step="1" data-odb-field="system.quantidade" value="{{item.quantidade}}" aria-label="Quantidade"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.descricao" value="{{item.descricao}}" aria-label="Descrição do equipamento"></td>
+        <td><button type="button" class="odb-delete-item">Excluir</button></td>
+      </tr>{{/each}}</tbody></table></div>
+    </section>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Magia" data-odb-panel="magia" hidden>
+    <section class="odb-ajuste-energia" aria-label="Ajuste manual de PM e PD">
+      <h3>Poder Mágico e Poder Divino — consumo e recuperação</h3>
+      <p>Escolha o recurso e informe a quantidade. Nenhum feitiço é lançado e nenhum custo é descontado automaticamente.</p>
+      <div class="odb-energia-grid">
+        <label>Recurso <select class="odb-energia-tipo"><option value="pm">PM — Poder Mágico</option><option value="pd">PD — Poder Divino</option></select></label>
+        <label>Operação <select class="odb-energia-operacao"><option value="gastar">Gastar</option><option value="recuperar">Recuperar</option></select></label>
+        <label>Quantidade <input class="odb-energia-quantidade" type="number" min="1" step="1" value="1"></label>
+      </div>
+      <p class="odb-energia-previa" aria-live="polite"></p>
+      <button type="button" class="odb-energia-aplicar">Aplicar alteração (confirmar)</button>
+      <p class="odb-combate-aviso">Operação manual: mínimo zero e máximo igual ao total do recurso. Não altera PV nem executa magias.</p>
+    </section>
+    <section class="odb-conjuracao-manual" aria-label="Custo manual de feitiços">
+      <h3>Magia e encantos — conjuração</h3>
+      <p>Selecione o feitiço, o recurso e a dificuldade definida pelo Mestre. O valor % cadastrado é o alvo base. Efeitos e duração são adjudicados pelo Mestre.</p>
+      <div class="odb-feitico-grid">
+        <label>Feitiço
+          <select class="odb-feitico-selecionado">
+            <option value="">Selecione um feitiço</option>
+            {{#each feiticosEditor as |feitico|}}<option value="{{feitico.id}}">{{feitico.nome}} — custo {{feitico.custo}}</option>{{/each}}
+          </select>
+        </label>
+        <label>Recurso
+          <select class="odb-feitico-recurso"><option value="pm">PM — Poder Mágico</option><option value="pd">PD — Poder Divino</option></select>
+        </label>
+      </div>
+      <p class="odb-feitico-previa" aria-live="polite"></p>
+      <label>Dificuldade <select class="odb-magia-dificuldade"><option value="rotineira">Rotineira ×4</option><option value="facil">Fácil ×2</option><option value="normal" selected>Normal</option><option value="dificil">Difícil ÷2</option><option value="quase">Quase impossível ÷4</option></select></label>
+      <label><input type="checkbox" class="odb-magia-pv"> Usar resistência física quando o poder estiver zerado (custo dobrado)</label>
+      <div class="odb-incorporacao" hidden><h4>Incorporação — controle do Mestre</h4><label>Orixá <select class="odb-orixa"></select></label><p class="odb-incorporacao-status"></p><button type="button" class="odb-orixa-iniciar">Incorporar / trocar</button><button type="button" class="odb-orixa-avancar">Avançar uma rodada</button><button type="button" class="odb-orixa-manter">Manter Orixá</button><button type="button" class="odb-orixa-encerrar">Encerrar</button></div>
+      <button type="button" class="odb-feitico-aplicar">Conjurar (confirmar)</button>
+      <button type="button" class="odb-magia-rm">Testar resistência à magia</button>
+      <button type="button" class="odb-magia-recuperar">Recuperar poder diário (Mestre)</button>
+    </section>
+    <section class="odb-editor" aria-label="Feitiços e encantos">
+      <h3>Feitiços e encantos — cadastro manual</h3>
+      <p>Cadastre o valor percentual total, custo e duração; utilize o painel de conjuração para testar e gastar poder.</p>
+      <button type="button" data-action="createSpell">+ Feitiço</button>
+      <div class="odb-editor-scroll"><table class="odb-editor-table"><thead><tr><th>Nome</th><th>Valor %</th><th>Custo</th><th>Duração</th><th>Descrição</th><th></th></tr></thead><tbody>
+      {{#each feiticosEditor as |item|}}
+      <tr data-odb-item-id="{{item.id}}">
+        <td><input class="odb-editor-input" data-odb-field="name" value="{{item.nome}}" aria-label="Nome do feitiço"></td>
+        <td><input class="odb-editor-input" type="number" min="0" step="1" data-odb-field="system.porcentagem" value="{{item.porcentagem}}" aria-label="Valor de aprendizado"></td>
+        <td><input class="odb-editor-input" type="number" min="0" data-odb-field="system.custo" value="{{item.custo}}" aria-label="Custo"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.duracao" value="{{item.duracao}}" aria-label="Duração"></td>
+        <td><input class="odb-editor-input" data-odb-field="system.descricao" value="{{item.descricao}}" aria-label="Descrição do feitiço"></td>
+        <td><button type="button" class="odb-delete-item">Excluir</button></td>
+      </tr>{{/each}}</tbody></table></div>
+    </section>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Evolução" data-odb-panel="evolucao" hidden>
+    <section class="odb-level-panel" aria-label="Progressão manual de nível">
+      <h3>Progressão — nível do personagem</h3>
+      <p><strong>Consulta oficial — Aprendizado (p. 48)</strong></p>
+      <p class="odb-xp-oficial" aria-live="polite"></p>
+      <button type="button" class="odb-xp-conferir">Conferir experiência acumulada</button>
+      <p>PE acumulados não são gastos na mudança de nível. Os controles de gasto anteriores são legados, não regras oficiais.</p>
+      <p>Altere o nível manualmente com confirmação. Nenhum PE será gasto automaticamente.</p>
+      <div class="odb-level-grid">
+        <label>Novo nível (1 a 999)<input class="odb-level-target" type="number" min="1" max="999" step="1" value="{{system.identidade.nivel}}"></label>
+        <label>Motivo (opcional)<input class="odb-level-note" type="text" maxlength="300" placeholder="Ex.: progressão aprovada pelo Mestre"></label>
+      </div>
+      <p class="odb-level-preview" aria-live="polite">Informe o novo nível e confirme.</p>
+      <button type="button" class="odb-level-apply">Confirmar mudança de nível</button>
+    </section>
+    <section class="odb-aprendizado-plano">
+      <h3>Aprendizado — planejamento dos 50 pontos</h3>
+      <p>Planejamento de aumentos e aquisição manual de novas habilidades e feitiços/encantos (máximo 10 por habilidade). Custos progressivos calculados por ponto. Usa a porcentagem cadastrada como valor de habilidade; testes registrados por habilidade e nível de destino. Em falha, retire o aumento planejado e redistribua os pontos. A conferência não altera a ficha; a aplicação exige confirmação do Mestre.</p>
+      <div class="odb-aprendizado-lista"></div>
+      <button type="button" class="odb-nova-habilidade">Planejar nova habilidade ou feitiço/encanto</button>
+      <button type="button" class="odb-aprendizado-conferir">Conferir distribuição</button>
+      <button type="button" class="odb-aprendizado-testar">Executar testes de aprendizado</button>
+      <button type="button" class="odb-aprendizado-aplicar">Aplicar passagem de nível (Mestre)</button>
+      <p class="odb-aprendizado-resultado" aria-live="polite"></p>
+    </section>
+    <section class="odb-poder-evolucao">
+      <h3>Aprendizado — evolução de poderes (p. 48)</h3>
+      <p>Registro pelo Mestre para o próximo nível. Não aplica ganhos automaticamente.</p>
+      <button type="button">Rolar e registrar ganhos</button>
+      <p aria-live="polite"></p>
+    </section>
+    <section class="odb-xp-panel" aria-label="Gerenciamento manual de experiência">
+      <h3>Progressão — pontos de experiência</h3>
+      <p>Conceda PE com confirmação. Os PE são acumulativos. O nível e as habilidades não mudam automaticamente.</p>
+      <div class="odb-xp-grid">
+        <label>Quantidade de PE<input class="odb-xp-amount" type="number" min="1" step="1" value="1"></label>
+        <label>Motivo (opcional)<input class="odb-xp-note" type="text" maxlength="300" placeholder="Ex.: recompensa de sessão"></label>
+      </div>
+      <p class="odb-xp-preview" aria-live="polite">Escolha uma operação para confirmar.</p>
+      <div class="odb-xp-actions">
+        <button type="button" data-xp-operation="award">Conceder PE</button>
+        
+      </div>
+    </section>
+    <section class="odb-skill-progression" aria-label="Progressão manual das habilidades">
+      <h3>Progressão — habilidades</h3>
+      <p>Altere manualmente o nível de uma habilidade já cadastrada. O custo em PE e a porcentagem não são alterados; siga as regras originais sob orientação do Mestre.</p>
+      <div class="odb-skill-progression-grid">
+        <label>Habilidade<select class="odb-skill-select"><option value="">Selecione uma habilidade</option>{{#each habilidadesEditor as |item|}}<option value="{{item.id}}">{{item.nome}} (nível {{item.nivel}})</option>{{/each}}</select></label>
+        <label>Novo nível<input class="odb-skill-target" type="number" min="0" max="999" step="1" value="0"></label>
+        <label>Motivo (opcional)<input class="odb-skill-note" type="text" maxlength="300" placeholder="Ex.: treinamento"></label>
+      </div>
+      <p class="odb-skill-preview" aria-live="polite">Selecione uma habilidade.</p>
+      <button type="button" class="odb-skill-apply">Confirmar nível da habilidade</button>
+    </section>
+    <section class="odb-skill-planner" aria-label="Planejamento de evolução sem alterações">
+      <h3>Planejamento legado — somente consulta</h3>
+      <p>Simule uma evolução de habilidade e um custo de PE informado pelo Mestre. A simulação não altera dados. Esta consulta histórica não representa a regra oficial e não pode alterar a ficha.</p>
+      <div class="odb-skill-progression-grid">
+        <label>Habilidade<select class="odb-plan-skill"><option value="">Selecione uma habilidade</option>{{#each habilidadesEditor as |item|}}<option value="{{item.id}}">{{item.nome}}</option>{{/each}}</select></label>
+        <label>Nível desejado<input class="odb-plan-level" type="number" min="0" max="999" step="1" value="0"></label>
+        <label>Custo em PE (informado pelo Mestre)<input class="odb-plan-cost" type="number" min="0" max="999999" step="1" value="0"></label>
+      </div>
+      <p class="odb-plan-result" aria-live="polite">Selecione uma habilidade para simular.</p>
+      <button type="button" class="odb-plan-refresh">Recalcular simulação</button>
+      
+    </section>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Histórico e backup" data-odb-panel="historico" hidden>
+    <section class="odb-historico-evolucao" aria-label="Histórico de evolução de habilidades">
+      <h3>Histórico de evolução de habilidades</h3>
+      <p>Exibe passagens oficiais registradas e até 30 operações antigas. Restaurar ou limpar o histórico antigo não modifica as passagens oficiais.</p>
+      <p class="odb-historico-resumo" aria-live="polite">Calculando resumo...</p>
+      <ol class="odb-historico-lista"><li>Carregando histórico...</li></ol>
+      <section class="odb-diagnostico-progressao" aria-label="Diagnóstico de progressão">
+        <h3>Diagnóstico de progressão — somente leitura</h3>
+        <p>Confere valores numéricos, composição de atributos e registros de evolução. Não valida custos oficiais nem modifica a ficha.</p>
+        <button type="button" class="odb-diagnostico-executar">Conferir progressão</button>
+        <button type="button" class="odb-diagnostico-exportar">Exportar diagnóstico (JSON)</button>
+        <div class="odb-diagnostico-resultado" aria-live="polite">Clique em Conferir progressão para examinar os dados atuais.</div>
+      </section>
+      <button type="button" class="odb-historico-atualizar">Atualizar histórico</button>
+      <button type="button" class="odb-historico-exportar">Exportar histórico (JSON)</button>
+      <button type="button" class="odb-progressao-backup">Exportar cópia da progressão (JSON)</button>
+      <label class="odb-comparar-progressao-label">Comparar com cópia de progressão (JSON) — somente leitura
+        <input type="file" class="odb-comparar-progressao-arquivo" accept=".json,application/json">
+      </label>
+      <div class="odb-comparar-progressao-resultado" aria-live="polite">Selecione uma cópia exportada na v0.4.4 ou posterior para conferir diferenças.</div>
+      <label class="odb-historico-importar-label">Restaurar histórico de arquivo JSON (substitui o histórico atual)
+        <input type="file" class="odb-historico-importar" accept=".json,application/json">
+      </label>
+      <button type="button" class="odb-historico-limpar">Limpar histórico (confirmar)</button>
+    </section>
+  </section>
+  <section class="odb-tab-panel odb-classic-tools" role="tabpanel" aria-label="Criação e compêndios" data-odb-panel="criacao" hidden>
+<details class="odb-criacao" open><summary>Criação de personagens e compêndios (Mestre)</summary><p>Cria uma nova ficha sem alterar a atual. Role 7d6 e redistribua os resultados.</p><label>Nome <input class="odb-nome" type="text"></label><label>Raça (terminologia do livro) <select class="odb-raca"></select></label><label>Profissão <select class="odb-prof"></select></label><button type="button" class="odb-sortear">Rolar 7d6</button><label>FOR <input class="odb-dado" type="number" min="1" max="6"></label><label>DES <input class="odb-dado" type="number" min="1" max="6"></label><label>RES <input class="odb-dado" type="number" min="1" max="6"></label><label>INT <input class="odb-dado" type="number" min="1" max="6"></label><label>SAB <input class="odb-dado" type="number" min="1" max="6"></label><label>CAR <input class="odb-dado" type="number" min="1" max="6"></label><label>Sorte <input class="odb-dado" type="number" min="1" max="6"></label><output></output><p>Esquiva: 20 pontos automáticos. Distribua 100 pontos de carreira e 50 gerais (máximo 20 por habilidade).</p><details><summary>Distribuição inicial de habilidades</summary><p class="odb-iniciais-resumo">Carregando catálogo...</p><div class="odb-iniciais"></div></details><button type="button" class="odb-criar">Criar nova ficha</button><button type="button" class="odb-popular">Preencher compêndios</button><details><summary>Gerar criatura por nível (Mestre)</summary><label>Criatura <select class="odb-criatura"></select></label><label>Nível <input type="number" class="odb-criatura-nivel" min="1" step="1" value="1"></label><output class="odb-criatura-info"></output><button type="button" class="odb-criatura-gerar">Criar criatura</button></details></details>
+  </section>
+</form>

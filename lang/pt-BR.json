@@ -1,0 +1,24 @@
+{
+  "ODB": {
+    "Nome": "Nome",
+    "Personagem": "Personagem",
+    "Atributos": "Atributos",
+    "Habilidades": "Habilidades",
+    "Inventario": "Inventário",
+    "Combate": "Combate",
+    "Magia": "Magia"
+  },
+  "TYPES": {
+    "Actor": {
+      "personagem": "Personagem",
+      "npc": "NPC"
+    },
+    "Item": {
+      "habilidade": "Habilidade",
+      "arma": "Arma",
+      "equipamento": "Equipamento",
+      "feitico": "Feitiço",
+      "encanto": "Encanto"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+ODB Sistema Básico v0.3.6 — Progressão manual de atributos.
+Selecione atributo e novo valor final; confirme. PE, componentes racial/profissão/gastos e recursos derivados não são recalculados.
+Faça backup antes de atualizar. Validação em Foundry 14 pendente.

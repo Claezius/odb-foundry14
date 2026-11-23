@@ -1,0 +1,6 @@
+ODB v0.4.3 — Restauração do histórico de evolução em JSON.
+
+Importa somente arquivos de histórico exportados pelo próprio sistema, formato v1, do mesmo personagem (ID igual), com até 30 registros. A importação substitui o histórico existente após confirmação. Não altera PE, níveis ou habilidades. Exporte antes de restaurar.
+
+Instalação: faça backup do mundo, feche o Foundry e extraia a pasta odb-foundry14 em Data/systems.
+Validação estática realizada; teste de execução no Foundry pendente.

@@ -1,0 +1,2 @@
+RC7 — distribuição inicial de habilidades, Módulo Básico pp. 13–15.
+Guerreiro, Rastreador e Ladrão: 20 Esquiva, 100 carreira, 50 gerais, até 20 por habilidade. Validação antes de criar uma nova ficha. Profissões mágicas/religiosas continuam manuais até revisão das listas. Trocar profissão reinicia a distribuição. Nenhuma ficha existente é alterada por este recurso. Testes Node aprovados; homologação Foundry pendente. Faça backup antes de instalar.

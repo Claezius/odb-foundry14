@@ -1,0 +1,178 @@
+/* v0.1.8 — a folha inteira é a única referência geométrica. */
+.odb-classic .window-content { padding:0 !important; overflow:auto !important; }
+.odb-classic-page { width:100%; max-width:1200px; aspect-ratio:1200 / 1698; position:relative; margin:0 auto; container-type:inline-size; background:#fff url('../assets/ficha-retrato.png') 0 0 / 100% 100% no-repeat; flex:none; }
+.odb-classic-page input.odb-slot {
+  position:absolute !important; display:block !important; box-sizing:border-box !important;
+  min-width:0 !important; min-height:0 !important; max-width:none !important;
+  padding:0 !important; margin:0 !important; border:0 !important;
+  border-radius:0 !important; outline:0 !important; box-shadow:none !important;
+  background:transparent !important; color:#101010 !important;
+  font:700 1.65cqw/1 Georgia,serif !important;
+  text-align:center !important; text-indent:0 !important;
+  letter-spacing:0 !important; text-transform:none !important;
+  appearance:none !important; -webkit-appearance:none !important;
+}
+.odb-classic-page input.odb-slot[type=text] {font-size:1.55cqw !important;}
+.odb-classic-page input.odb-slot:focus { background:rgba(255,246,190,.93) !important; outline:2px solid #9c6a14 !important; z-index:4; }
+.odb-classic-page input.odb-slot:hover:not(:focus) {background:rgba(255,246,190,.3) !important;}
+.odb-classic-page .odb-item-slot {font-size:1.45cqw !important; height:1.55% !important;}
+
+/* Editor separado da folha original: nao altera suas coordenadas. */
+.odb-classic .odb-editor { margin: 12px 0; }
+.odb-classic .odb-editor h3 { margin: 12px 0 5px; }
+.odb-classic .odb-editor-scroll { overflow-x: auto; }
+.odb-classic .odb-editor-table { width: 100%; min-width: 650px; border-collapse: collapse; }
+.odb-classic .odb-editor-table th, .odb-classic .odb-editor-table td { padding: 4px; vertical-align: middle; }
+.odb-classic .odb-editor-table input { box-sizing: border-box; width: 100%; min-width: 0; height: 30px; }
+.odb-classic .odb-editor-table td:first-child { min-width: 150px; }
+.odb-classic .odb-editor-table .odb-delete-item { white-space: nowrap; }
+
+/* 0.2.1 — barra isolada da folha, sem sobreposição. */
+.odb-classic .odb-classic-toolbar { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:5px 9px; min-height:28px; box-sizing:border-box; background:#222; color:#fff; font-size:12px; }
+.odb-classic .odb-classic-toolbar strong {flex:1; min-width:0;}
+.odb-classic .odb-classic-toolbar span {flex:0 1 auto; text-align:right;}
+
+/* 0.2.2 — painel abaixo da folha, sem alterar geometria original. */
+.odb-classic .odb-calculos { padding:12px; margin:12px 0; border:1px solid #827c6d; }
+.odb-classic .odb-calculos-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:6px; margin:10px 0;}
+.odb-classic .odb-calculos-grid>div {display:flex;flex-wrap:wrap;gap:6px;padding:6px;border:1px solid #777;}
+.odb-classic .odb-calculos-grid span {font-size:12px;}
+.odb-classic .odb-calculos button {padding:7px 12px;}
+
+/* v0.2.4 — painel independente da imagem da ficha. */
+.odb-classic .odb-rolagens { margin:12px 0; padding:12px; border:1px solid #827c6d; }
+.odb-classic .odb-rolagens-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.odb-classic .odb-rolagens-grid>div { min-width:0; }
+.odb-classic .odb-rolagens-grid button { display:block; width:100%; margin:4px 0; text-align:left; white-space:normal; }
+@media (max-width:700px) { .odb-classic .odb-rolagens-grid { grid-template-columns:1fr; } }
+
+/* v0.2.5 — calculadora abaixo da ficha; não modifica coordenadas da folha. */
+.odb-classic .odb-combate-manual {margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-combate-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0;align-items:end;}
+.odb-classic .odb-combate-grid label {display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-combate-grid input,.odb-classic .odb-combate-grid select {width:100%;min-width:0;box-sizing:border-box;}
+.odb-classic .odb-combate-aviso {font-size:12px;opacity:.8;}
+@media(max-width:700px){.odb-classic .odb-combate-grid{grid-template-columns:1fr;}}
+
+/* v0.2.6 — painel separado, sem interferência na folha original. */
+.odb-classic .odb-testes-combate{margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-testes-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:end;margin:10px 0;}
+.odb-classic .odb-testes-grid label{display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-testes-grid input{width:100%;box-sizing:border-box;min-width:0;}
+@media(max-width:700px){.odb-classic .odb-testes-grid{grid-template-columns:1fr;}}
+
+/* v0.2.7: seleção de habilidades para rolagens manuais */
+.odb-combate-vinculo { display:flex; flex-wrap:wrap; align-items:end; gap:8px; margin:8px 0; }
+.odb-combate-vinculo label { flex:1 1 240px; }
+.odb-combate-vinculo select { width:100%; min-height:30px; }
+.odb-combate-vinculo button { flex:0 1 auto; }
+
+/* v0.2.9 — painel fora da folha impressa */
+.odb-classic .odb-ajuste-pv{margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+.odb-classic .odb-pv-grid label{display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-pv-grid input,.odb-classic .odb-pv-grid select{width:100%;box-sizing:border-box;}
+.odb-classic .odb-pv-previa{font-weight:bold;}
+@media(max-width:700px){.odb-classic .odb-pv-grid{grid-template-columns:1fr;}}
+
+/* v0.3.0 — painéis adicionais, fora da imagem clássica */
+.odb-condicoes-manuais,.odb-ponte-dano{margin:12px 0;padding:12px;border:1px solid #847c6d;border-radius:4px;}
+.odb-condicoes-manuais textarea{display:block;width:100%;min-height:76px;box-sizing:border-box;margin:6px 0 10px;}
+.odb-condicoes-manuais p,.odb-ponte-dano p{margin:6px 0;}
+
+/* v0.3.1 — PM e PD; painel fora da imagem clássica */
+.odb-classic .odb-ajuste-energia{margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-energia-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.odb-classic .odb-energia-grid label{display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-energia-grid input,.odb-classic .odb-energia-grid select{width:100%;min-width:0;box-sizing:border-box;}
+.odb-classic .odb-energia-previa{font-weight:bold;}
+@media(max-width:700px){.odb-classic .odb-energia-grid{grid-template-columns:1fr;}}
+
+/* v0.3.2 — integração de custos sem alterar a ficha impressa */
+.odb-classic .odb-conjuracao-manual{margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-feitico-grid{display:grid;grid-template-columns:2fr 1fr;gap:10px;}
+.odb-classic .odb-feitico-grid label{display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-feitico-grid select{width:100%;min-width:0;box-sizing:border-box;}
+.odb-classic .odb-feitico-previa{font-weight:bold;}
+@media(max-width:700px){.odb-classic .odb-feitico-grid{grid-template-columns:1fr;}}
+
+/* v0.3.3 — painel de experiência fora da imagem da ficha */
+.odb-classic .odb-xp-panel{margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-xp-grid{display:grid;grid-template-columns:1fr 2fr;gap:10px;}
+.odb-classic .odb-xp-grid label{display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-xp-grid input{box-sizing:border-box;width:100%;min-width:0;}
+.odb-classic .odb-xp-actions{display:flex;flex-wrap:wrap;gap:8px;}
+.odb-classic .odb-xp-actions button{flex:1;min-width:125px;}
+@media(max-width:700px){.odb-classic .odb-xp-grid{grid-template-columns:1fr;}}
+
+/* v0.3.4 — painel de nível independente da ficha impressa */
+.odb-classic .odb-level-panel{margin:12px 0;padding:12px;border:1px solid #827c6d;}
+.odb-classic .odb-level-grid{display:grid;grid-template-columns:1fr 2fr;gap:10px;}
+.odb-classic .odb-level-grid label{display:flex;flex-direction:column;gap:4px;}
+.odb-classic .odb-level-grid input{box-sizing:border-box;width:100%;min-width:0;}
+@media(max-width:700px){.odb-classic .odb-level-grid{grid-template-columns:1fr;}}
+
+/* v0.3.5 — painel de progressão de habilidades */
+.odb-skill-progression {margin:12px 0;padding:12px;border:1px solid var(--color-border-light-primary,#888);border-radius:6px;}
+.odb-skill-progression-grid {display:grid;grid-template-columns:2fr 1fr 2fr;gap:8px;}
+.odb-skill-progression-grid label {display:flex;flex-direction:column;gap:4px;}
+.odb-skill-progression-grid input,.odb-skill-progression-grid select {width:100%;}
+@media(max-width:650px){.odb-skill-progression-grid{grid-template-columns:1fr;}}
+
+/* v0.3.6 — painel de progressão manual de atributos */
+.odb-attribute-progression { margin: 12px 0; padding: 12px; border: 1px solid #8b7458; border-radius: 5px; }
+.odb-attribute-progression-grid { display: flex; flex-wrap: wrap; gap: 10px; align-items: end; }
+.odb-attribute-progression-grid label { display: flex; flex-direction: column; flex: 1 1 180px; gap: 4px; }
+.odb-attribute-progression-grid input, .odb-attribute-progression-grid select { width: 100%; }
+
+/* v0.3.7 — auditoria informativa de atributos */
+.odb-attribute-audit { margin: 12px 0; padding: 10px; border: 1px solid #99816a; border-radius: 5px; }
+.odb-attribute-audit .odb-editor-table { min-width: 640px; }
+.odb-attribute-audit .odb-audit-difference { background: rgba(190, 120, 55, .14); }
+.odb-attribute-audit-summary { font-weight: 600; }
+
+/* v0.4.0: histórico de evolução */
+.odb-historico-evolucao { margin: 1rem 0; padding: .75rem; border: 1px solid #9b8a6d; }
+.odb-historico-lista { max-height: 12rem; overflow-y: auto; padding-left: 1.6rem; }
+.odb-historico-lista li { margin: .35rem 0; overflow-wrap: anywhere; }
+
+.odb-historico-resumo { font-weight: 600; padding: .35rem .5rem; border-left: 3px solid #9b8a6d; }
+
+/* v0.4.3 — restauração de histórico */
+.odb-historico-importar-label{display:block;margin:.65rem 0;}
+.odb-historico-importar-label input{display:block;max-width:100%;margin-top:.3rem;}
+
+/* v0.4.5 — comparação de cópia de progressão */
+.odb-comparar-progressao-label{display:block;margin:.65rem 0;}
+.odb-comparar-progressao-label input{display:block;max-width:100%;margin-top:.3rem;}
+.odb-comparar-progressao-resultado{margin:.5rem 0;padding:.5rem;border:1px solid #9b8a6d;max-height:18rem;overflow:auto;}
+.odb-comparar-progressao-resultado p{margin:.2rem 0;overflow-wrap:anywhere;}
+.odb-comparar-diferenca{border-left:3px solid #a87536;padding-left:.4rem;}
+
+/* RC2 — navigation, independent of classic sheet geometry. */
+.odb-classic .odb-sheet-tabs { position:sticky; top:0; z-index:20; display:flex; flex-wrap:wrap; gap:4px; padding:8px; background:#29241e; border-bottom:2px solid #a58b57; flex:none; }
+.odb-classic .odb-sheet-tabs button { flex:1 0 auto; width:auto; min-height:34px; padding:5px 9px; border:1px solid #796b56; border-radius:5px; background:#40382e; color:#f6edda; font-size:12px; white-space:nowrap; }
+.odb-classic .odb-sheet-tabs button[aria-selected="true"] { background:#e9d7af; color:#302318; border-color:#d7b66e; font-weight:bold; }
+.odb-classic .odb-sheet-tabs button:focus-visible { outline:2px solid #e9d7af; outline-offset:2px; }
+.odb-classic .odb-tab-panel[hidden] { display:none !important; }
+.odb-classic .odb-tab-panel:not([hidden]) { display:block; min-width:0; }
+.odb-classic .odb-tab-panel.odb-classic-tools { padding:10px 14px; }
+
+/* RC4 — retrato sobre a área inferior da folha, sem alterar coordenadas. */
+.odb-classic-page .odb-appearance {position:absolute; top:45.7%; left:8%; width:84%; height:46%; display:flex; flex-direction:column; align-items:center; gap:1cqw; color:#22190e;}
+.odb-classic-page .odb-appearance h2 {font:bold 2.4cqw Georgia,serif; text-align:center; margin:0; color:#22190e; border:0;}
+.odb-classic-page button.odb-portrait {position:relative; display:block; width: auto; height:91%; max-width:100%; aspect-ratio: 359 / 498; padding:0; margin:0; border:0; background:transparent; box-shadow:none; cursor:pointer;}
+.odb-classic-page .odb-portrait img {position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:0;}
+.odb-classic-page .odb-portrait-image {object-fit:cover; mask:url('../assets/moldura-retrato-mascara.png') center / 100% 100% no-repeat;}
+.odb-classic-page .odb-portrait-frame {object-fit:fill; pointer-events:none;}
+.odb-classic-page .odb-portrait:disabled {opacity:1; cursor:default;}
+
+.odb-iniciais {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:4px;max-height:340px;overflow:auto;}
+.odb-iniciais label {display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.odb-iniciais input {width:55px;flex:none;}
+
+/* RC26: manter os campos da folha acima de camadas decorativas. */
+.odb-classic-page input.odb-slot { z-index: 5; pointer-events: auto !important; user-select: text; }
+.odb-classic-page input.odb-slot:focus { z-index: 6; }
+.odb-classic-page .odb-appearance { pointer-events: none; }
+.odb-classic-page .odb-portrait { pointer-events: auto; }

@@ -1,0 +1,5 @@
+ODB v0.4.4 — Exportação de cópia de progressão em JSON.
+Inclui nível, PE, composição dos atributos, habilidades e histórico disponível.
+É somente leitura e NÃO pode ser reimportada pelo controle de histórico.
+Não substitui o backup do mundo Foundry.
+Faça backup e teste em personagem de teste antes de usar em campanha.

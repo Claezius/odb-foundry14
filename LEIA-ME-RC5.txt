@@ -1,0 +1,1 @@
+RC5: exportação nativa, leitura das passagens oficiais, remoção de catálogo provisório e preenchimento parcial de equipamentos e feitiços. Não substitui backup do mundo. Testar no Foundry. As capas permanecem originais.

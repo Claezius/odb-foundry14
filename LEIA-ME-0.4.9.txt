@@ -1,0 +1,1 @@
+Consulta de custos somente leitura. Importe catálogo válido; intervalos [início,fim), convenção provisória. Catálogo não persistido. Nenhum valor oficial incluído.

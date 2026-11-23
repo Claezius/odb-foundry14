@@ -1,0 +1,7 @@
+ODB 0.4.7 — Estrutura das tabelas oficiais de evolução
+
+O arquivo data/tabelas-evolucao.json é um catálogo VAZIO. Não foram inventados custos.
+O painel da ficha permite validar a estrutura de um JSON selecionado, sem aplicar custos ou modificar personagens.
+Formato de tabela futura: {"id":"habilidades","nome":"Evolução de habilidades","faixas":[{"nivelInicial":1,"nivelFinal":2,"custoPE":0}]} — EXEMPLO DE ESTRUTURA, NÃO REGRA OFICIAL.
+Antes de preencher, consultar e conferir livro original, edição e páginas.
+Faça backup do mundo. Testar em Foundry VTT 14.

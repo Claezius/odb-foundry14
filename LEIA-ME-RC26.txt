@@ -1,0 +1,1 @@
+RC26: tentativa de corrigir edição direta dos oito campos de escudo e colete na ficha clássica. Campos usam data-odb-path e salvamento individual, evitando nomes de formulário duplicados. Camadas decorativas não interceptam cliques. Terceira linha permanece sem vínculo de dados. Teste no Foundry pendente.

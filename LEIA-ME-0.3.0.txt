@@ -1,0 +1,7 @@
+ODB 0.3.0 — Condições manuais e ponte de dano para PV.
+Mantém a ficha clássica sem alterações de coordenadas.
+A ponte somente preenche a quantidade do painel de PV; exige confirmação posterior.
+As condições são texto livre salvo em system.combate.condicoes e podem ser publicadas no chat.
+Não automatiza estados ou regras não verificadas.
+Faça backup do mundo e do sistema antes de instalar.
+Não testado em execução no Foundry VTT 14.

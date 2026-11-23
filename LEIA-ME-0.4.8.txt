@@ -1,0 +1,3 @@
+ODB 0.4.8 — Modelo e revisão estrutural de tabelas de evolução
+Novidades: baixar modelo JSON vazio; detectar IDs duplicados e faixas sobrepostas; avisar sobre lacunas; listar tabelas importadas. Sem regras oficiais, sem persistência do catálogo e sem alterações nos personagens.
+Faça backup e teste no Foundry VTT 14.

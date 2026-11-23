@@ -1,0 +1,5 @@
+ODB 0.3.9 — Evolução opcional de habilidade com gasto de PE.
+O custo é informado manualmente pelo Mestre; nenhuma tabela oficial é presumida.
+A simulação não altera dados. O botão de aplicação exige confirmação e tenta restaurar o nível anterior se o desconto de PE falhar.
+A porcentagem da habilidade permanece inalterada.
+Faça backup e teste em um personagem de teste antes de usar em campanha.

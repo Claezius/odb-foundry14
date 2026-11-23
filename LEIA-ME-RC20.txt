@@ -1,0 +1,2 @@
+RC20 — Consolidação para homologação.
+Preserva código de jogo RC19. Atualiza manifesto, documentação e testes de integridade. Compêndios inicialmente vazios: preencher pela ficha como Mestre. Não é uma versão estável. Testar em cópia do mundo, com backup. Publicação depende de permissões de redistribuição.

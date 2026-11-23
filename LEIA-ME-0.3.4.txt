@@ -1,0 +1,9 @@
+O DESAFIO DOS BANDEIRANTES — v0.3.4
+Base: v0.3.3. Nenhuma coordenada da ficha impressa foi modificada.
+NOVO: painel de progressão manual de nível, com confirmação e registro no chat.
+- Aceita níveis inteiros de 1 a 999; não permite aplicar o mesmo nível.
+- Não altera PE, atributos, habilidades ou outros recursos.
+- As regras oficiais de avanço ainda não foram automatizadas.
+ATENÇÃO: faça backup do mundo e do sistema antes de instalar.
+Teste a abertura e a gravação em personagem de teste.
+Não houve execução desta versão dentro do Foundry VTT 14 neste ambiente.

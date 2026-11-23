@@ -1,0 +1,1 @@
+v0.5.2 — quatro compêndios Item vazios, declarados no manifesto. O Foundry deverá inicializar os bancos LevelDB nas pastas reservadas. Não há dados oficiais incluídos. Faça backup e teste a inicialização no Foundry 14.

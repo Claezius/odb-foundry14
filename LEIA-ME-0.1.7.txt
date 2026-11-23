@@ -1,0 +1,9 @@
+ODB v0.1.7 — ALINHAMENTO MEDIDO NA ARTE ORIGINAL
+
+As caixas de atributos, recursos e defesa foram identificadas diretamente na imagem original (1200 x 1698), com coordenadas independentes por linha.
+O erro anterior era o uso de incrementos fixos entre linhas, que se desviavam progressivamente dos quadrados impressos.
+A rotina de gravação por mudança de campo, confirmada na v0.1.2, foi preservada.
+
+Instalação: faça backup do sistema e do mundo, feche o Foundry, substitua Data/systems/odb-foundry14 e reinicie.
+Teste: abra a ficha, confira os valores centralizados e confirme salvamento ao sair do campo.
+Não foi possível executar este sistema dentro do Foundry neste ambiente.

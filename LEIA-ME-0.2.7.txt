@@ -1,0 +1,9 @@
+O DESAFIO DOS BANDEIRANTES — v0.2.7
+
+Base: v0.2.6. Adicionada seleção de habilidades cadastradas no painel de combate.
+Escolha a habilidade e clique em "Usar no ataque" ou "Usar na defesa".
+A porcentagem será copiada para o campo correspondente, sem modificar a ficha.
+O Mestre decide qual habilidade usar. Os testes continuam manuais e não aplicam dano.
+
+Instalação: faça backup do mundo e do sistema; feche o Foundry; substitua a pasta odb-foundry14.
+Verificação: sintaxe e integridade ZIP; execução no Foundry não testada.

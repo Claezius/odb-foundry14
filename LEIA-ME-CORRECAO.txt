@@ -1,0 +1,5 @@
+ODB 0.1.2 — Correção de persistência de campos
+
+Faça backup do mundo e do sistema. Feche o Foundry, substitua a pasta odb-foundry14 por esta e reinicie. Em uma ficha de teste, digite Jogador e Idade, pressione Tab para sair do campo, feche e reabra a ficha.
+
+Esta versão salva cada campo diretamente ao perder o foco, sem depender do envio automático do formulário V2. Não testada dentro do Foundry.

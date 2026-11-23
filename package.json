@@ -1,0 +1,8 @@
+{
+  "name": "odb-foundry14",
+  "version": "1.0.0-rc.29",
+  "private": true,
+  "scripts": {
+    "test": "node tests/regras.mjs && node tests/pacote.mjs"
+  }
+}

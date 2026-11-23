@@ -1,0 +1,17 @@
+O DESAFIO DOS BANDEIRANTES — 0.1.3
+Base: versão 0.1.2 confirmada funcionando pelo usuário.
+
+ALTERAÇÕES
+- Seções de habilidades de carreira, habilidades gerais e armas, lendo os itens do ator.
+- Painel informativo de fórmulas impressas (PV, PM, PD, RM, VB).
+- Sem alterações ao template.json, aos dados dos atores ou à rotina de salvamento.
+- Os itens são apresentados para consulta; edição de itens na ficha será implementada depois.
+- BD e demais mecânicas não foram automatizados.
+
+INSTALAÇÃO
+1. Faça backup da pasta do sistema e do mundo.
+2. Feche o Foundry.
+3. Substitua a pasta odb-foundry14 pela pasta deste ZIP.
+4. Teste Jogador e Idade, depois as novas seções.
+
+AVISO: verificado estaticamente, não executado dentro do Foundry.

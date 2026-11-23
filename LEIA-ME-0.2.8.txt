@@ -1,0 +1,5 @@
+ODB 0.2.8 — seleção de arma no painel de combate.
+Selecione arma cadastrada, consulte dano/alcance/munição e role dano manual.
+Não altera PV nem munição. Chance de ataque continua sendo definida pelo Mestre.
+Base: v0.2.7. Faça backup antes de instalar.
+Teste no Foundry VTT 14 ainda necessário.

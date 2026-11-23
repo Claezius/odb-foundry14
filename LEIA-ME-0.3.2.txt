@@ -1,0 +1,13 @@
+O DESAFIO DOS BANDEIRANTES — v0.3.2
+
+Base: v0.3.1. Nenhuma coordenada da ficha clássica foi modificada.
+
+NOVO: painel de registro de custo de feitiços cadastrados, escolhendo PM ou PD.
+- O custo é lido do item Feitiço.
+- Valida números inteiros, saldo disponível e limite do recurso.
+- Exige confirmação antes de alterar PM/PD atual.
+- Não executa o feitiço, não rola dados e não determina automaticamente se o feitiço usa PM ou PD.
+
+Instalação: faça backup do mundo e do sistema; feche o Foundry; substitua a pasta odb-foundry14.
+Teste com personagem de teste e um feitiço de custo 1, verificando o saldo após reabrir.
+Não houve teste de execução no Foundry neste ambiente.

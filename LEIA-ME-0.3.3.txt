@@ -1,0 +1,10 @@
+O DESAFIO DOS BANDEIRANTES — v0.3.3
+Base: v0.3.2. A ficha impressa e as posições de campos não foram modificadas.
+NOVO: painel de pontos de experiência (PE) abaixo da ficha clássica.
+- Concede ou gasta PE inteiros não negativos com confirmação.
+- Não permite gastar mais do que o saldo.
+- Publica o movimento no chat com motivo opcional.
+- Não modifica nível, atributos ou habilidades.
+- Não implementa regras oficiais de progressão: o Mestre decide os valores.
+IMPORTANTE: faça backup do mundo e da pasta do sistema antes de instalar.
+A execução dentro do Foundry VTT 14 não foi testada neste ambiente.

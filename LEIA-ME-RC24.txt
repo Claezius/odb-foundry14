@@ -1,0 +1,1 @@
+RC24: dano diário de doenças com subtração usa pool de dados com mínimo zero. Incubação e aplicação manual preservadas. Testar rolagem no Foundry 14.

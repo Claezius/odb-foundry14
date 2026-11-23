@@ -1,0 +1,5 @@
+ODB Sistema Básico v0.4.0 — Histórico de evolução de habilidades
+
+Registra as 30 últimas evoluções aplicadas pelo painel de PE, com data, habilidade, nível e saldo de PE. Histórico iniciado nesta versão; não reconstrói eventos anteriores. Permite atualizar e limpar com confirmação.
+
+Não implementa custos oficiais. Faça backup antes de instalar. Teste no Foundry 14.

@@ -1,0 +1,1 @@
+Custos de aprendizado — p. 48. Simulação, sem alteração da ficha. Usa porcentagem como valor da habilidade. Transições calculadas marginalmente, interpretação de implementação. Testes 1d100 pendentes.

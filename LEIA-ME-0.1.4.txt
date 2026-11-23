@@ -1,0 +1,1 @@
+Versão 0.1.4 — reorganização visual da ficha em duas colunas, baseada na ficha impressa. Mantida a rotina de gravação individual dos campos da v0.1.2/0.1.3. Sem alterações no template.json e sem migração de personagens. Testar no Foundry 14. Faça backup do sistema e mundo antes de instalar.

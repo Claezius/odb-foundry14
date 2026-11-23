@@ -1,0 +1,5 @@
+ODB v0.3.1 — Ajuste manual de PM e PD
+Painel abaixo da ficha clássica: escolha recurso, operação e quantidade; confira a prévia e confirme.
+Não lança feitiços nem aplica custos automaticamente. Preserva os dados do personagem.
+Faça backup do mundo e da pasta do sistema antes de instalar.
+Execução no Foundry VTT 14 ainda não validada neste ambiente.

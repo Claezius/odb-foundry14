@@ -1,0 +1,9 @@
+O DESAFIO DOS BANDEIRANTES — 0.2.4
+Base: versão 0.2.3. Mantidos todos os campos, coordenadas e salvamento da ficha.
+NOVO: painel de rolagens manuais abaixo da ficha.
+- Habilidades: 1d100 comparado à porcentagem cadastrada (convenção provisória).
+- Armas: rolagem da expressão de dano cadastrada, ex. 1d6+2.
+- Mensagens no chat, sem alterações de PV, munição ou dados.
+NÃO IMPLEMENTADO: iniciativa, acerto, defesa, absorção e efeitos automáticos.
+TESTE: verifique abertura da ficha e botões no Foundry 14; execução não foi validada neste ambiente.
+Faça backup do mundo e do sistema antes de instalar.
