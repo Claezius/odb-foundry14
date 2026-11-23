@@ -3,6 +3,6 @@
   "version": "1.0.0-rc.30",
   "private": true,
   "scripts": {
-    "test": "node tests/regras.mjs && node tests/pacote.mjs && node tests/modelos.mjs && node tests/compatibilidade.mjs && node tests/formulario.mjs && node tests/auditoria-limites.mjs"
+    "test": "node tests/regras.mjs && node tests/pacote.mjs && node tests/modelos.mjs && node tests/compatibilidade.mjs && node tests/formulario.mjs && node tests/auditoria-limites.mjs && node tests/deduplicacao.mjs"
   }
 }
