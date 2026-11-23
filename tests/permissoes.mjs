@@ -14,3 +14,10 @@ for(const [seletor, aviso] of [
 }
 assert.match(source,/if \(!item \|\| !item\.isOwner \|\| !field\) return;/,'Edição de Item sem guarda de propriedade');
 console.log('Permissões: guardas de proprietário nos controles auditados.');
+
+// Histórico e exclusão de itens exigem permissão de proprietário.
+for(const aviso of ['Sem permissão para restaurar histórico.','Sem permissão para limpar histórico.','Sem permissão para excluir item.']){
+  const pos=source.indexOf(aviso);
+  assert.ok(pos>=0,'Aviso de permissão ausente: '+aviso);
+  assert.match(source.slice(Math.max(0,pos-140),pos),/isOwner/,'Guarda de propriedade ausente: '+aviso);
+}
